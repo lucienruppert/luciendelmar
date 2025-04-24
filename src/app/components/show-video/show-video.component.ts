@@ -56,6 +56,11 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit() {
+    // Define global debug function to prevent errors before loading the API
+    if (!(window as any).debug) {
+      (window as any).debug = () => {};
+    }
+
     if (!this.apiLoaded) {
       // Load the YouTube API
       const tag = document.createElement('script');
