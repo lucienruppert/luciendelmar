@@ -6,11 +6,14 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { importProvidersFrom } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { DIALOG_DATA, DialogModule } from '@angular/cdk/dialog';
+import { ShowVideoComponent } from './app/components/show-video/show-video.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
     provideAnimationsAsync(),
-    importProvidersFrom(FlexLayoutModule, YouTubePlayerModule),
-  ],
+    importProvidersFrom(FlexLayoutModule, YouTubePlayerModule, DialogModule),
+    { provide: DIALOG_DATA, useValue: {} },
+  ]
 }).catch((err) => console.error(err));

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Dialog } from '@angular/cdk/dialog';
+import { Dialog, DialogModule } from '@angular/cdk/dialog';
 import { ShowVideoComponent } from '../show-video/show-video.component';
 import videos from './videos';
 import { CommonModule } from '@angular/common';
@@ -23,6 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
+    DialogModule,
   ],
 })
 export class VideosComponent {
@@ -34,6 +35,8 @@ export class VideosComponent {
   public openDialog(id: string): void {
     this.dialog.open(ShowVideoComponent, {
       data: { id },
+      backdropClass: 'dialog-backdrop',
+      panelClass: 'video-dialog',
     });
   }
 }

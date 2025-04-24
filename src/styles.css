@@ -19,12 +19,15 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.cdk-overlay-dark-backdrop {
-  background: rgba(255,255,255,255);
+/* Dialog backdrop styling */
+.dialog-backdrop {
+  background-color: white !important;
+  /* opacity: 1 !important; */
 }
 
-button {
-  background: var(--primary);
-  @apply px-10 py-3 rounded-full text-white text-lg;
+.video-dialog {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
