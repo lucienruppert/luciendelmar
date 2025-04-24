@@ -9,6 +9,9 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { DIALOG_DATA, DialogModule } from '@angular/cdk/dialog';
 import { ShowVideoComponent } from './app/components/show-video/show-video.component';
 
+// Define global debug function to prevent YouTube API errors
+(window as any).debug = function() {};
+
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),

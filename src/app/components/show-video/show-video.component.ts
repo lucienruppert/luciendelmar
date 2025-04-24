@@ -17,6 +17,28 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
   public width: number = 0;
   public height: number = 0;
   private apiLoaded = false;
+  public playerReady = false;
+  public playerError = false;
+  public playerConfig = {
+    playerVars: {
+      // Disable related videos
+      rel: 0,
+      // Hide YouTube logo
+      modestbranding: 1,
+      // Disable keyboard controls
+      disablekb: 0,
+      // Don't show video info
+      showinfo: 0,
+      // Disable annotations
+      iv_load_policy: 3,
+      // Disable fullscreen button
+      fs: 1,
+      // Allow embedding on any site
+      origin: 'http://localhost:4200',
+      // Disable ad features that cause errors with ad blockers
+      enablejsapi: 1
+    }
+  };
   @ViewChild('video')
   video!: ElementRef<HTMLElement>;
 
@@ -26,11 +48,16 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
   ) {
     this.id = data.id;
     this.setPlayerSize();
+    
+    // Define global debug function to prevent errors
+    if (!(window as any).debug) {
+      (window as any).debug = () => {};
+    }
   }
 
   ngOnInit() {
     if (!this.apiLoaded) {
-      // Load the YouTube API if not already loaded
+      // Load the YouTube API
       const tag = document.createElement('script');
       tag.src = 'https://www.youtube.com/iframe_api';
       document.body.appendChild(tag);
@@ -40,8 +67,20 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.video!.nativeElement.blur();
+      if (this.video) {
+        this.video.nativeElement.blur();
+      }
     }, 0);
+  }
+
+  onPlayerReady() {
+    this.playerReady = true;
+    console.log('YouTube player ready');
+  }
+
+  onPlayerError(event: any) {
+    console.error('YouTube player error:', event);
+    this.playerError = true;
   }
 
   setPlayerSize(): void {

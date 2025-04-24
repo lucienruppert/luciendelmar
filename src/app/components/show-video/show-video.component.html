@@ -1,5 +1,16 @@
 <button type="button" class="close" (click)="closeDialog()" #video>
   <mat-icon fontIcon="cancel" class="icon"></mat-icon>
 </button>
-<youtube-player [videoId]="id" [height]="height" [width]="width" class="z-0">
+<youtube-player
+  [videoId]="id"
+  [height]="height"
+  [width]="width"
+  [playerVars]="playerConfig.playerVars"
+  (ready)="onPlayerReady()"
+  (error)="onPlayerError($event)"
+  class="z-0"
+>
 </youtube-player>
+<div *ngIf="playerError" class="player-error">
+  <p>Error loading video. Please try again later.</p>
+</div>
