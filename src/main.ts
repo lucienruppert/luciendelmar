@@ -1,7 +1,16 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { importProvidersFrom } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(routes),
+    provideAnimationsAsync(),
+    importProvidersFrom(FlexLayoutModule, YouTubePlayerModule),
+  ],
+}).catch((err) => console.error(err));

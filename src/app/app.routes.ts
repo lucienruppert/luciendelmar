@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { MethodComponent } from './components/method/method.component';
 import { VideosComponent } from './components/videos/videos.component';
@@ -10,7 +9,8 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BenefitsComponent } from './components/benefits/benefits.component';
 
-const routes: Routes = [
+export default [];
+export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
@@ -47,11 +47,4 @@ const routes: Routes = [
     path: 'benefits',
     component: BenefitsComponent,
   },
-  { path: '**', redirectTo: '' },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}

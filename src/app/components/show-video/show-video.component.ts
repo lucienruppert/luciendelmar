@@ -1,11 +1,16 @@
 import { DialogRef, DIALOG_DATA } from '@angular/cdk/dialog';
 import { Component, Inject } from '@angular/core';
 import { AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-show-video',
   templateUrl: './show-video.component.html',
   styleUrl: './show-video.component.css',
+  standalone: true,
+  imports: [CommonModule, YouTubePlayerModule, MatIconModule],
 })
 export class ShowVideoComponent implements AfterViewInit {
   public id: string = '';
@@ -19,7 +24,6 @@ export class ShowVideoComponent implements AfterViewInit {
     @Inject(DIALOG_DATA) public data: { id: string }
   ) {
     this.setPlayerSize();
-    this.id = data.id;
   }
 
   ngAfterViewInit() {
