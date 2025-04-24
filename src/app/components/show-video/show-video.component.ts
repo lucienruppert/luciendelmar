@@ -34,10 +34,10 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
       // Disable fullscreen button
       fs: 1,
       // Allow embedding on any site
-      origin: 'http://localhost:4200',
+      origin: window.location.origin,
       // Disable ad features that cause errors with ad blockers
-      enablejsapi: 1
-    }
+      enablejsapi: 1,
+    },
   };
   @ViewChild('video')
   video!: ElementRef<HTMLElement>;
@@ -48,7 +48,7 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
   ) {
     this.id = data.id;
     this.setPlayerSize();
-    
+
     // Define global debug function to prevent errors
     if (!(window as any).debug) {
       (window as any).debug = () => {};
