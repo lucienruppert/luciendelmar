@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MailerLiteService } from './services/MailerLite.service';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
@@ -28,7 +27,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatToolbarModule,
     FlexLayoutModule,
   ],
-  providers: [MailerLiteService],
 })
 export class AppComponent {
   private apiLoaded: boolean = false;
@@ -36,6 +34,11 @@ export class AppComponent {
   public activeMenu: string = '';
 
   ngOnInit() {
+    // Skip DOM and window operations on the server
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     if (!this.apiLoaded) {
       const tag = document.createElement('script');
       tag.src = 'https://www.youtube.com/iframe_api';

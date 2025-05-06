@@ -35,7 +35,20 @@
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": {
+              "discoverRoutes": true,
+              "routes": [
+                "/",
+                "/about",
+                "/method",
+                "/videos",
+                "/events",
+                "/vision",
+                "/services",
+                "/contact",
+                "/benefits"
+              ]
+            },
             "ssr": {
               "entry": "server.ts"
             }

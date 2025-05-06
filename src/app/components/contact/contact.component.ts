@@ -1,5 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { MailerLiteService } from '../../services/MailerLite.service';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,10 +22,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule,
   ],
 })
-export class ContactComponent implements AfterViewInit {
-  constructor(private mailerLiteService: MailerLiteService) {}
-
-  public async ngAfterViewInit() {
-    await this.mailerLiteService.loadScript();
-  }
+export class ContactComponent {
+  constructor() {}
 }
