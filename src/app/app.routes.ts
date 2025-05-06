@@ -15,37 +15,47 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    // Add prerender option for all routes
+    data: { prerender: true }
   },
   {
     path: 'about',
     component: AboutComponent,
+    data: { prerender: true }
   },
   {
     path: 'method',
     component: MethodComponent,
+    data: { prerender: true }
   },
   {
     path: 'videos',
     component: VideosComponent,
+    data: { prerender: true }
   },
   {
     path: 'events',
     component: EventsComponent,
+    data: { prerender: true }
   },
   {
     path: 'vision',
     component: VisionComponent,
+    data: { prerender: true }
   },
   {
     path: 'services',
     component: ServicesComponent,
+    data: { prerender: true }
   },
   {
     path: 'contact',
     component: ContactComponent,
+    data: { prerender: true }
   },
   {
     path: 'benefits',
     component: BenefitsComponent,
+    data: { prerender: true }
   },
 ];

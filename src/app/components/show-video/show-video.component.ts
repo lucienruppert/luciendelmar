@@ -34,7 +34,7 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
       // Disable fullscreen button
       fs: 1,
       // Allow embedding on any site
-      origin: window.location.origin,
+      origin: typeof window !== 'undefined' ? window.location.origin : '',
       // Disable ad features that cause errors with ad blockers
       enablejsapi: 1,
     },
@@ -49,13 +49,18 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
     this.id = data.id;
     this.setPlayerSize();
 
-    // Define global debug function to prevent errors
-    if (!(window as any).debug) {
+    // Define global debug function to prevent errors - only in browser
+    if (typeof window !== 'undefined' && !(window as any).debug) {
       (window as any).debug = () => {};
     }
   }
 
   ngOnInit() {
+    // Skip YouTube API loading on server
+    if (typeof window === 'undefined') {
+      return;
+    }
+    
     // Define global debug function to prevent errors before loading the API
     if (!(window as any).debug) {
       (window as any).debug = () => {};
@@ -71,6 +76,11 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
+    // Skip DOM manipulation on server
+    if (typeof window === 'undefined') {
+      return;
+    }
+    
     setTimeout(() => {
       if (this.video) {
         this.video.nativeElement.blur();
@@ -89,9 +99,17 @@ export class ShowVideoComponent implements AfterViewInit, OnInit {
   }
 
   setPlayerSize(): void {
+    // Set default values for server-side rendering
     let widthSizeByScreen = 0.4;
-    if (window.screen.width <= 768) widthSizeByScreen = 0.9;
-    this.width = window.screen.width * widthSizeByScreen;
+    
+    if (typeof window !== 'undefined') {
+      if (window.screen.width <= 768) widthSizeByScreen = 0.9;
+      this.width = window.screen.width * widthSizeByScreen;
+    } else {
+      // Default size for server-side rendering (desktop)
+      this.width = 800;
+    }
+    
     const aspectRatio = 9 / 16;
     this.height = this.width * aspectRatio;
   }

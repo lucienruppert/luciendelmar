@@ -1,11 +1,38 @@
 import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
-import { provideServerRendering } from '@angular/platform-server';
-import { appConfig } from './app.config';
+// Import app configuration directly
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { importProvidersFrom } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { DIALOG_DATA, DialogModule } from '@angular/cdk/dialog';
+import { provideClientHydration } from '@angular/platform-browser';
 
-const serverConfig: ApplicationConfig = {
+// Define application config inline to avoid import issues
+const appConfig: ApplicationConfig = {
   providers: [
-    provideServerRendering()
+    provideRouter(routes),
+    provideAnimationsAsync(),
+    importProvidersFrom(FlexLayoutModule, YouTubePlayerModule, DialogModule),
+    { provide: DIALOG_DATA, useValue: {} },
+    provideClientHydration(),
   ]
 };
+
+// Server-specific configuration with dynamic import
+const serverConfig: ApplicationConfig = {
+  providers: []
+};
+
+// Use dynamic import for server rendering if available at runtime
+try {
+  const serverModule = require('@angular/platform-server');
+  if (serverModule && serverModule.provideServerRendering) {
+    serverConfig.providers.push(serverModule.provideServerRendering());
+  }
+} catch (e) {
+  console.warn('Could not load @angular/platform-server module');
+}
 
 export const config = mergeApplicationConfig(appConfig, serverConfig);
