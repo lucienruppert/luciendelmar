@@ -26,9 +26,13 @@ mat-nav-list * {
 }
 
 mat-toolbar {
-  height: 60px;
+  @apply h-[60px] flex items-center;
   background: var(--primary);
   color: var(--secondary);
+}
+
+mat-toolbar-row {
+  @apply w-[1200px];
 }
 
 .brand {

@@ -5,7 +5,7 @@
 }
 
 main {
-  @apply w-1/2;
+  @apply w-[1200px];
 }
 
 img {
