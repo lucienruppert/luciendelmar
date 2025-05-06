@@ -1,7 +1,5 @@
 :host {
-  min-height: 100vh;
-  height: auto;
-  display: block;
+  @apply min-h-screen h-auto block w-full;
 }
 
 .menu-spacer {
@@ -40,9 +38,13 @@ mat-toolbar-row {
 }
 
 .active {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 button {
   @apply px-3 py-3 text-sm font-normal;
+}
+
+.content-container {
+  @apply max-w-[900px] mx-auto px-4;
 }

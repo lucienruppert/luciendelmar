@@ -4,10 +4,6 @@
   color: grey;
 }
 
-main {
-  @apply w-[1200px];
-}
-
 img {
   @apply float-end ml-5;
 }

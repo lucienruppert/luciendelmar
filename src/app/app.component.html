@@ -1,5 +1,4 @@
 <div>
-  
   <mat-toolbar>
     <mat-toolbar-row>
       <button
@@ -16,9 +15,7 @@
         class="mr-2 cursor-pointer"
         routerLink="/"
       />
-      <span routerLink="/" class="cursor-pointer brand"
-        >Lucien del Mar</span
-      >
+      <span routerLink="/" class="cursor-pointer brand">Lucien del Mar</span>
       <span class="menu-spacer"></span>
       <div fxShow="true" fxHide.lt-md>
         <button routerLink="about" routerLinkActive="active">Rólam</button>
@@ -56,8 +53,12 @@
         </button>
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
+
+    <mat-sidenav-content class="bg-white">
+      <div class="content-container">
+        <router-outlet></router-outlet>
+      </div>
     </mat-sidenav-content>
+
   </mat-sidenav-container>
 </div>
