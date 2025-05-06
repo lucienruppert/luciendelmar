@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { importProvidersFrom } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutServerModule } from '@angular/flex-layout/server';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { DIALOG_DATA, DialogModule } from '@angular/cdk/dialog';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -17,12 +18,12 @@ const appConfig: ApplicationConfig = {
     importProvidersFrom(FlexLayoutModule, YouTubePlayerModule, DialogModule),
     { provide: DIALOG_DATA, useValue: {} },
     provideClientHydration(),
-  ]
+  ],
 };
 
-// Server-specific configuration with dynamic import
+// Server-specific configuration with FlexLayoutServerModule
 const serverConfig: ApplicationConfig = {
-  providers: []
+  providers: [importProvidersFrom(FlexLayoutServerModule)],
 };
 
 // Use dynamic import for server rendering if available at runtime
