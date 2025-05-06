@@ -4,10 +4,6 @@
   color: grey;
 }
 
-main {
-  @apply w-1/2;
-}
-
 img {
   @apply ml-5  float-right;
 }

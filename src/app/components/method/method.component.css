@@ -12,10 +12,6 @@ span  {
   @apply ml-5;
 }
 
-main {
-  @apply w-1/2;
-}
-
 .highlight {
   color: var(--primary);
   @apply text-lg my-5;

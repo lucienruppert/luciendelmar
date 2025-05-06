@@ -5,7 +5,7 @@
 }
 
 main {
-  @apply mt-10 w-1/2 mb-20;
+  @apply mt-10 mb-20;
 }
 
 @media (max-width: 768px) {

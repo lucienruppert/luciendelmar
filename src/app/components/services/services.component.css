@@ -19,11 +19,6 @@ p {
 }
 
 main {
-  @apply w-1/3 flex flex-col items-center;
+  @apply flex flex-col items-center;
 }
 
-@media (max-width: 768px) {
-  main {
-    @apply w-4/5;
-  }
-}
