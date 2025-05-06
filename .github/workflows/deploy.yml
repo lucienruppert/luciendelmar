@@ -20,15 +20,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-              npm install -g npm-force-resolutions
-              npm install --legacy-peer-deps
-              npx npm-force-resolutions
-              npm install --legacy-peer-deps
+          npm install -g npm-force-resolutions
+          npm install --legacy-peer-deps
+          npx npm-force-resolutions
+          npm install --legacy-peer-deps
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
       - name: Build Angular app
-        run: npm run build -- --configuration production
+        run: npm run build:production
 
       - name: Upload built files via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
