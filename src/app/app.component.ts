@@ -68,11 +68,16 @@ export class AppComponent implements AfterViewInit {
 
   /** Opens the sidenav explicitly on hamburger click */
   openSidenav(event: Event) {
-    event.preventDefault();
+    // Prevent click from closing via backdrop or propagating
+    event.stopImmediatePropagation();
     event.stopPropagation();
-    if (this.sidenav && !this.sidenav.opened) {
-      this.sidenav.open();
-    }
+    event.preventDefault();
+    // Defer opening until after click processing to avoid backdrop close
+    setTimeout(() => {
+      if (this.sidenav && !this.sidenav.opened) {
+        this.sidenav.open();
+      }
+    }, 0);
   }
 
   /** Closes the sidenav explicitly on close button or navigation */

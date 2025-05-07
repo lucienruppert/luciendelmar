@@ -17,11 +17,15 @@
     <mat-sidenav
       #sidenav
       position="end"
-      [disableClose]="false"
-      [autoFocus]="false"
-      [fixedInViewport]="true"
-      mode="over"
+      [disableClose]="true"
+      <!--
+      disable
+      backdrop
+      click
+      close
+      --
     >
+      [autoFocus]="false" [fixedInViewport]="true" mode="over" >
       <div class="sidenav-header">
         <button
           mat-icon-button
