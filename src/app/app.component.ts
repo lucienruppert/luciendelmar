@@ -36,6 +36,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 export class AppComponent implements AfterViewInit {
   private apiLoaded: boolean = false;
   private isMobile: boolean = false;
+  private lastToggleTime: number = 0;
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
   constructor(private cdr: ChangeDetectorRef) {}
@@ -70,23 +71,22 @@ export class AppComponent implements AfterViewInit {
     if (event) {
       event.preventDefault();
       event.stopPropagation();
-
-      // IMPORTANT: For mobile devices, only handle click events, ignore touchstart
-      // This prevents the double-firing issue where both click and touchstart trigger
-      if (this.isMobile && event.type === 'touchstart') {
-        return;
-      }
     }
+
+    // Debounce toggle operations
+    const now = Date.now();
+    if (now - this.lastToggleTime < 300) {
+      // 300ms debounce
+      return;
+    }
+    this.lastToggleTime = now;
 
     // Safety check
     if (!this.sidenav) {
       return;
     }
 
-    // For more reliable toggle behavior, especially on mobile
-    setTimeout(() => {
-      this.sidenav.toggle();
-    }, 0);
+    this.sidenav.toggle();
   }
 
   // Separate method for navigation

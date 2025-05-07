@@ -5,7 +5,7 @@
       <span class="menu-spacer"></span>
       <button
         mat-icon-button
-        (click)="toggleSidenav($event)"
+        (pointerdown)="toggleSidenav($event)"
         class="flex items-center justify-center hamburger-button"
       >
         <mat-icon>menu</mat-icon>
@@ -25,7 +25,7 @@
       <div class="sidenav-header">
         <button
           mat-icon-button
-          (click)="toggleSidenav($event)"
+          (pointerdown)="toggleSidenav($event)"
           class="close-button"
         >
           <mat-icon>close</mat-icon>
