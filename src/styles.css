@@ -10,7 +10,7 @@
 
 html,
 body {
-  @apply font-light h-full m-0;
+  @apply font-light h-full m-0 bg-white;
   background: var(--primary);
 }
 
