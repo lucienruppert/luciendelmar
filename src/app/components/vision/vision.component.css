@@ -13,7 +13,3 @@ main {
     @apply w-4/5;
   }
 }
-
-.title {
-  color: var(--primary);
-}

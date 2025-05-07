@@ -9,10 +9,6 @@
   @apply text-lg;
 }
 
-.title {
-  color: var(--primary);
-}
-
 li {
   @apply mb-5;
 }
