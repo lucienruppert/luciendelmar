@@ -13,7 +13,6 @@ img {
 
 a {
   @apply cursor-pointer;
-  color: var(--primary);
 }
 
 @media (max-width: 768px) {

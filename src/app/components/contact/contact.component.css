@@ -9,7 +9,6 @@
 }
 
 span {
-  color: var(--primary);
   @apply text-xl mt-10;
 }
 

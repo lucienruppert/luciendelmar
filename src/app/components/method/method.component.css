@@ -13,7 +13,6 @@ span {
 }
 
 .highlight {
-  color: var(--primary);
   @apply text-lg my-5;
 }
 

@@ -5,7 +5,6 @@
 }
 
 span {
-  color: var(--primary);
   @apply text-xl my-5;
 }
 

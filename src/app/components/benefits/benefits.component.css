@@ -5,7 +5,6 @@
 }
 
 .highlight {
-  color: var(--primary);
   @apply text-lg;
 }
 
