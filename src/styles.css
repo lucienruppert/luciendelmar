@@ -5,13 +5,12 @@
 :root {
   --primary: teal;
   /* #008080 | rgb(0,128,128) */
-  --secondary: #FFD700; /* yellow */
+  --secondary: #ffd700; /* yellow */
 }
 
 html,
 body {
-  height: 100%;
-  margin: 0;
+  @apply font-light h-full m-0;
   background: var(--primary);
 }
 
@@ -30,4 +29,3 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
