@@ -67,19 +67,19 @@ export class AppComponent implements AfterViewInit {
   }
 
   toggleSidenav(event: Event) {
+    // Only handle real mouse clicks, ignore touch events
+    if ((event as any).type !== 'click') {
+      return;
+    }
     // Prevent default action and stop bubbling
-    event?.preventDefault();
-    event?.stopPropagation();
+    event.preventDefault();
+    event.stopPropagation();
 
-    // Safety check
+    // Only open via hamburger; closing handled by close button or nav links
     if (!this.sidenav) {
       return;
     }
-
-    // Open or close explicitly to prevent double toggles on mobile
-    if (this.sidenav.opened) {
-      this.sidenav.close();
-    } else {
+    if (!this.sidenav.opened) {
       this.sidenav.open();
     }
   }
