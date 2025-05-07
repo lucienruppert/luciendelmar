@@ -66,21 +66,23 @@ export class AppComponent implements AfterViewInit {
     this.cdr.detectChanges();
   }
 
-  toggleSidenav(event: Event) {
-    // Only handle real mouse clicks, ignore touch events
-    if ((event as any).type !== 'click') {
-      return;
-    }
-    // Prevent default action and stop bubbling
+  /** Opens the sidenav explicitly on hamburger click */
+  openSidenav(event: Event) {
     event.preventDefault();
     event.stopPropagation();
-
-    // Only open via hamburger; closing handled by close button or nav links
-    if (!this.sidenav) {
-      return;
-    }
-    if (!this.sidenav.opened) {
+    if (this.sidenav && !this.sidenav.opened) {
       this.sidenav.open();
+    }
+  }
+
+  /** Closes the sidenav explicitly on close button or navigation */
+  closeSidenav(event?: Event) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    if (this.sidenav && this.sidenav.opened) {
+      this.sidenav.close();
     }
   }
 
