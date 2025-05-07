@@ -11,7 +11,7 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  @apply w-64 md:w-72 z-50;
+  @apply w-64 md:w-72 z-50 bg-zinc-900;
   transition: transform 0.3s ease;
 }
 
@@ -68,7 +68,7 @@ button[mat-icon-button] {
 
 /* Sidenav header styling */
 .sidenav-header {
-  @apply flex justify-end p-2 border-b border-gray-800;
+  @apply flex justify-end p-2 border-b border-gray-800 bg-zinc-900;
 }
 
 .close-button {
