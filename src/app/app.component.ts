@@ -71,6 +71,7 @@ export class AppComponent implements AfterViewInit {
     if (event && (event as any).type !== 'click') {
       return;
     }
+
     // Prevent the default action and stop event bubbling
     if (event) {
       event.preventDefault();
