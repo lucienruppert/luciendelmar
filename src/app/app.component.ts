@@ -67,31 +67,21 @@ export class AppComponent implements AfterViewInit {
   }
 
   toggleSidenav(event: Event) {
-    // Only allow toggle on real click events (not touchstart, pointerdown, etc)
-    if (event && (event as any).type !== 'click') {
-      return;
-    }
-
-    // Prevent the default action and stop event bubbling
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    // Debounce toggle operations
-    const now = Date.now();
-    if (now - this.lastToggleTime < 300) {
-      // 300ms debounce
-      return;
-    }
-    this.lastToggleTime = now;
+    // Prevent default action and stop bubbling
+    event?.preventDefault();
+    event?.stopPropagation();
 
     // Safety check
     if (!this.sidenav) {
       return;
     }
 
-    this.sidenav.toggle();
+    // Open or close explicitly to prevent double toggles on mobile
+    if (this.sidenav.opened) {
+      this.sidenav.close();
+    } else {
+      this.sidenav.open();
+    }
   }
 
   // Separate method for navigation
