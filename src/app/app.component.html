@@ -6,7 +6,8 @@
       <button
         mat-icon-button
         (click)="toggleSidenav($event)"
-        class="flex items-center justify-center"
+        (touchstart)="toggleSidenav($event)"
+        class="flex items-center justify-center hamburger-button"
       >
         <mat-icon>menu</mat-icon>
       </button>
@@ -14,11 +15,20 @@
   </mat-toolbar>
 
   <mat-sidenav-container>
-    <mat-sidenav #sidenav position="end">
+    <mat-sidenav
+      #sidenav
+      position="end"
+      [disableClose]="false"
+      [autoFocus]="false"
+      [fixedInViewport]="true"
+      [fixedTopGap]="0"
+      mode="over"
+    >
       <div class="sidenav-header">
         <button
           mat-icon-button
           (click)="toggleSidenav($event)"
+          (touchstart)="toggleSidenav($event)"
           class="close-button"
         >
           <mat-icon>close</mat-icon>
@@ -28,49 +38,56 @@
         <button
           routerLink="about"
           routerLinkActive="active"
-          (click)="toggleSidenav($event)"
+          (click)="navigateTo($event, 'about')"
+          (touchstart)="navigateTo($event, 'about')"
         >
           Rólam
         </button>
         <button
           routerLink="vision"
           routerLinkActive="active"
-          (click)="toggleSidenav($event)"
+          (click)="navigateTo($event, 'vision')"
+          (touchstart)="navigateTo($event, 'vision')"
         >
           Vízió
         </button>
         <button
           routerLink="method"
           routerLinkActive="active"
-          (click)="toggleSidenav($event)"
+          (click)="navigateTo($event, 'method')"
+          (touchstart)="navigateTo($event, 'method')"
         >
           Módszerek
         </button>
         <button
           routerLink="benefits"
           routerLinkActive="active"
-          (click)="toggleSidenav($event)"
+          (click)="navigateTo($event, 'benefits')"
+          (touchstart)="navigateTo($event, 'benefits')"
         >
           Mire jó?
         </button>
         <button
           routerLink="services"
           routerLinkActive="active"
-          (click)="toggleSidenav($event)"
+          (click)="navigateTo($event, 'services')"
+          (touchstart)="navigateTo($event, 'services')"
         >
           Szolgáltatások
         </button>
         <button
           routerLink="videos"
           routerLinkActive="active"
-          (click)="toggleSidenav($event)"
+          (click)="navigateTo($event, 'videos')"
+          (touchstart)="navigateTo($event, 'videos')"
         >
           Videók
         </button>
         <button
           routerLink="contact"
           routerLinkActive="active"
-          (click)="toggleSidenav($event)"
+          (click)="navigateTo($event, 'contact')"
+          (touchstart)="navigateTo($event, 'contact')"
         >
           Kapcsolat
         </button>

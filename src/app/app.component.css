@@ -90,9 +90,49 @@ mat-nav-list button.active {
     backface-visibility: hidden;
     -webkit-touch-callout: none;
     touch-action: manipulation;
+    /* Prevent iOS from adding blur effect on sidenav */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    /* Ensure iOS Safari doesn't have issues with the positioning */
+    position: fixed !important;
   }
 
   mat-nav-list button {
     @apply py-4 my-2; /* Increase touch target size */
+    pointer-events: auto; /* Ensure clicks are captured properly */
+    /* Prevent iOS text selection on tap */
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  mat-sidenav-container {
+    /* Prevent overscroll bounce effects */
+    overscroll-behavior: none;
+    touch-action: pan-y;
+  }
+
+  /* Increase size of nav toggle button for easier targeting */
+  button[mat-icon-button] {
+    @apply min-w-[44px] min-h-[44px];
+    touch-action: manipulation;
+    /* Prevent iOS tap highlight */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Make sure to prevent any ghost clicks */
+  .mat-drawer-inner-container {
+    touch-action: pan-y;
+    /* Prevent scrolling issues */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hamburger button specific fixes */
+  .hamburger-button {
+    /* Prevent accidental double taps */
+    pointer-events: auto;
+    cursor: pointer;
+    /* Add a slight delay to touch response to prevent double triggering */
+    transition: opacity 0.2s ease;
   }
 }
