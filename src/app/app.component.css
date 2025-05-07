@@ -11,7 +11,7 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  @apply bg-black w-64 md:w-72 z-50;
+  @apply bg-black w-64 md:w-72 lg:w-80 z-50;
 }
 
 mat-nav-list {
@@ -27,7 +27,7 @@ mat-toolbar {
 }
 
 mat-toolbar-row {
-  @apply w-full max-w-[1200px] mx-auto px-4;
+  @apply w-full max-w-[1200px] mx-auto px-4 flex items-center;
 }
 
 .brand {
@@ -40,6 +40,18 @@ mat-toolbar-row {
 
 button {
   @apply px-3 py-3 text-lg font-light;
+}
+
+/* Add specific styling for navigation buttons */
+mat-toolbar-row button {
+  @apply lg:px-2 xl:px-3;
+}
+
+/* Add more spacing in larger screens */
+@media (min-width: 1280px) {
+  mat-toolbar-row button {
+    @apply px-4;
+  }
 }
 
 .content-container {
