@@ -36,11 +36,11 @@ mat-toolbar-row {
 }
 
 .active {
-  @apply text-white;
+  @apply text-gray-400;
 }
 
 button {
-  @apply px-3 py-2 text-lg font-light;
+  @apply px-3 py-2 text-lg font-light text-gray-400;
 }
 
 .content-container {
@@ -77,5 +77,5 @@ button[mat-icon-button] {
 
 /* Active link styling in sidenav */
 mat-nav-list button.active {
-  @apply text-white border-l-2 border-gold pl-2;
+  @apply text-gray-400 border-l-2 border-gold pl-2;
 }
