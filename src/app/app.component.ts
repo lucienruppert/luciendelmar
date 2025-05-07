@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
@@ -28,10 +28,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule,
   ],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   private apiLoaded: boolean = false;
   public isMobile: boolean = false;
   public activeMenu: string = '';
+
+  /** Close sidenav when window resizes to desktop size */
+  @ViewChild('sidenav') sidenav: any;
 
   ngOnInit() {
     // Skip DOM and window operations on the server
@@ -51,6 +54,16 @@ export class AppComponent {
     window.addEventListener('resize', () => {
       this.checkScreenSize();
     });
+  }
+
+  ngAfterViewInit() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024 && this.sidenav?.opened) {
+          this.sidenav.close();
+        }
+      });
+    }
   }
 
   checkScreenSize() {

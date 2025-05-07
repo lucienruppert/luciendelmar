@@ -14,6 +14,13 @@ mat-sidenav {
   @apply bg-black w-64 md:w-72 lg:w-80 z-50;
 }
 
+/* Hide sidenav completely on large screens */
+@media (min-width: 1024px) {
+  ::ng-deep .mat-drawer-backdrop {
+    display: none !important;
+  }
+}
+
 mat-nav-list {
   @apply flex flex-col w-44 bg-black;
 }
@@ -63,9 +70,16 @@ mat-icon {
   @apply text-gold;
 }
 
-/* Ensure menu button is visible on mobile */
+/* Ensure menu button is visible on mobile and hidden on large screens */
 button[mat-icon-button] {
-  @apply flex items-center justify-center;
+  @apply flex items-center justify-center lg:hidden;
+}
+
+/* Explicitly hide hamburger on large screens */
+@media (min-width: 1024px) {
+  button[mat-icon-button] {
+    display: none !important;
+  }
 }
 
 /* Make mobile navigation more visible */
