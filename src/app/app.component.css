@@ -27,7 +27,7 @@ mat-toolbar {
 }
 
 mat-toolbar-row {
-  @apply w-[1200px];
+  @apply w-full max-w-[1200px] mx-auto px-4;
 }
 
 .brand {
@@ -54,4 +54,13 @@ mat-icon {
 /* Ensure menu button is visible on mobile */
 button[mat-icon-button] {
   @apply flex items-center justify-center;
+}
+
+/* Make mobile navigation more visible */
+::ng-deep .mat-drawer-inner-container {
+  @apply bg-black !important;
+}
+
+::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
+  @apply bg-opacity-70 !important;
 }

@@ -54,6 +54,8 @@ export class AppComponent {
   }
 
   checkScreenSize() {
-    this.isMobile = window.innerWidth <= 768;
+    // Use the same breakpoint as in our Tailwind styles for md
+    // Standard md breakpoint in Tailwind is 768px
+    this.isMobile = window.innerWidth < 768;
   }
 }
