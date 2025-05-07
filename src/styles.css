@@ -4,12 +4,9 @@
 
 html,
 body {
-  @apply font-light text-gray-600 bg-zinc-900;
+  @apply font-light bg-zinc-900;
   height: 100%;
   margin: 0;
-}
-
-body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
