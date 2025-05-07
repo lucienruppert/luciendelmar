@@ -11,22 +11,16 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  @apply bg-black w-64 md:w-72 lg:w-80 z-50;
-}
-
-/* Hide sidenav completely on large screens */
-@media (min-width: 1024px) {
-  ::ng-deep .mat-drawer-backdrop {
-    display: none !important;
-  }
+  @apply bg-black w-64 md:w-72 z-50;
+  transition: transform 0.3s ease;
 }
 
 mat-nav-list {
-  @apply flex flex-col w-44 bg-black;
+  @apply flex flex-col w-full bg-black pt-4;
 }
 
 mat-nav-list * {
-  @apply mb-4 text-start ml-5 pl-0 py-0;
+  @apply mb-4 text-start ml-5 pl-0 py-2;
 }
 
 mat-toolbar {
@@ -34,7 +28,7 @@ mat-toolbar {
 }
 
 mat-toolbar-row {
-  @apply w-full max-w-[1200px] mx-auto px-4 flex items-center;
+  @apply w-full max-w-[1200px] mx-auto px-4 flex items-center justify-between;
 }
 
 .brand {
@@ -46,40 +40,21 @@ mat-toolbar-row {
 }
 
 button {
-  @apply px-3 py-3 text-lg font-light;
-}
-
-/* Add specific styling for navigation buttons */
-mat-toolbar-row button {
-  @apply lg:px-2 xl:px-3;
-}
-
-/* Add more spacing in larger screens */
-@media (min-width: 1280px) {
-  mat-toolbar-row button {
-    @apply px-4;
-  }
+  @apply px-3 py-2 text-lg font-light;
 }
 
 .content-container {
   @apply max-w-[900px] mx-auto px-4;
 }
 
-/* Hamburger menu icon styling */
+/* Icon styling */
 mat-icon {
   @apply text-gold;
 }
 
-/* Ensure menu button is visible on mobile and hidden on large screens */
+/* Button styling for the menu toggle */
 button[mat-icon-button] {
-  @apply flex items-center justify-center lg:hidden;
-}
-
-/* Explicitly hide hamburger on large screens */
-@media (min-width: 1024px) {
-  button[mat-icon-button] {
-    display: none !important;
-  }
+  @apply flex items-center justify-center;
 }
 
 /* Make mobile navigation more visible */
@@ -89,4 +64,18 @@ button[mat-icon-button] {
 
 ::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
   @apply bg-opacity-70 !important;
+}
+
+/* Sidenav header styling */
+.sidenav-header {
+  @apply flex justify-end p-2 border-b border-gray-800;
+}
+
+.close-button {
+  @apply flex items-center justify-center;
+}
+
+/* Active link styling in sidenav */
+mat-nav-list button.active {
+  @apply text-white border-l-2 border-gold pl-2;
 }

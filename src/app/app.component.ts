@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
@@ -28,12 +28,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule,
   ],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   private apiLoaded: boolean = false;
-  public isMobile: boolean = false;
-  public activeMenu: string = '';
-
-  /** Close sidenav when window resizes to desktop size */
   @ViewChild('sidenav') sidenav: any;
 
   ngOnInit() {
@@ -48,27 +44,5 @@ export class AppComponent implements AfterViewInit {
       document.body.appendChild(tag);
       this.apiLoaded = true;
     }
-
-    // Check for mobile and update when resize
-    this.checkScreenSize();
-    window.addEventListener('resize', () => {
-      this.checkScreenSize();
-    });
-  }
-
-  ngAfterViewInit() {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', () => {
-        if (window.innerWidth >= 1024 && this.sidenav?.opened) {
-          this.sidenav.close();
-        }
-      });
-    }
-  }
-
-  checkScreenSize() {
-    // Use the same breakpoint as in our Tailwind styles for lg
-    // Standard lg breakpoint in Tailwind is 1024px
-    this.isMobile = window.innerWidth < 1024;
   }
 }

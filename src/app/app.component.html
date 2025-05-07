@@ -1,47 +1,73 @@
 <div>
   <mat-toolbar>
     <mat-toolbar-row>
+      <span routerLink="/" class="cursor-pointer brand">Lucien del Mar</span>
+      <span class="menu-spacer"></span>
       <button
         mat-icon-button
         (click)="sidenav.toggle()"
-        class="block lg:!hidden"
+        class="flex items-center justify-center"
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <span routerLink="/" class="cursor-pointer brand">Lucien del Mar</span>
-      <span class="menu-spacer"></span>
-      <div class="hidden lg:block">
-        <button routerLink="about" routerLinkActive="active">Rólam</button>
-        <button routerLink="vision" routerLinkActive="active">Vízió</button>
-        <button routerLink="method" routerLinkActive="active">Módszer</button>
-        <button routerLink="benefits" routerLinkActive="active">
-          Mire jó?
-        </button>
-        <button routerLink="services" routerLinkActive="active">
-          Szolgáltatások
-        </button>
-        <button routerLink="videos" routerLinkActive="active">Videók</button>
-        <button routerLink="contact" routerLinkActive="active">
-          Kapcsolat
-        </button>
-      </div>
     </mat-toolbar-row>
   </mat-toolbar>
 
   <mat-sidenav-container>
-    <mat-sidenav #sidenav>
+    <mat-sidenav #sidenav position="end">
+      <div class="sidenav-header">
+        <button mat-icon-button (click)="sidenav.toggle()" class="close-button">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
       <mat-nav-list>
-        <button routerLink="about" (click)="sidenav.toggle()">Rólam</button>
-        <button routerLink="vision" (click)="sidenav.toggle()">Vízió</button>
-        <button routerLink="method" (click)="sidenav.toggle()">Módszer</button>
-        <button routerLink="benefits" (click)="sidenav.toggle()">
+        <button
+          routerLink="about"
+          routerLinkActive="active"
+          (click)="sidenav.toggle()"
+        >
+          Rólam
+        </button>
+        <button
+          routerLink="vision"
+          routerLinkActive="active"
+          (click)="sidenav.toggle()"
+        >
+          Vízió
+        </button>
+        <button
+          routerLink="method"
+          routerLinkActive="active"
+          (click)="sidenav.toggle()"
+        >
+          Módszer
+        </button>
+        <button
+          routerLink="benefits"
+          routerLinkActive="active"
+          (click)="sidenav.toggle()"
+        >
           Mire jó?
         </button>
-        <button routerLink="services" (click)="sidenav.toggle()">
+        <button
+          routerLink="services"
+          routerLinkActive="active"
+          (click)="sidenav.toggle()"
+        >
           Szolgáltatások
         </button>
-        <button routerLink="videos" (click)="sidenav.toggle()">Videók</button>
-        <button routerLink="contact" (click)="sidenav.toggle()">
+        <button
+          routerLink="videos"
+          routerLinkActive="active"
+          (click)="sidenav.toggle()"
+        >
+          Videók
+        </button>
+        <button
+          routerLink="contact"
+          routerLinkActive="active"
+          (click)="sidenav.toggle()"
+        >
           Kapcsolat
         </button>
       </mat-nav-list>
