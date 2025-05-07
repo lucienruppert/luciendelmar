@@ -63,7 +63,7 @@ button[mat-icon-button] {
 }
 
 ::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
-  @apply bg-opacity-70 !important;
+  @apply bg-zinc-900/80 !important;
 }
 
 /* Sidenav header styling */
