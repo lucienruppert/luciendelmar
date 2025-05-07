@@ -6,7 +6,6 @@
       <button
         mat-icon-button
         (click)="toggleSidenav($event)"
-        (touchstart)="toggleSidenav($event)"
         class="flex items-center justify-center hamburger-button"
       >
         <mat-icon>menu</mat-icon>
@@ -21,14 +20,12 @@
       [disableClose]="false"
       [autoFocus]="false"
       [fixedInViewport]="true"
-      [fixedTopGap]="0"
       mode="over"
     >
       <div class="sidenav-header">
         <button
           mat-icon-button
           (click)="toggleSidenav($event)"
-          (touchstart)="toggleSidenav($event)"
           class="close-button"
         >
           <mat-icon>close</mat-icon>
@@ -39,7 +36,6 @@
           routerLink="about"
           routerLinkActive="active"
           (click)="navigateTo($event, 'about')"
-          (touchstart)="navigateTo($event, 'about')"
         >
           Rólam
         </button>
@@ -47,7 +43,6 @@
           routerLink="vision"
           routerLinkActive="active"
           (click)="navigateTo($event, 'vision')"
-          (touchstart)="navigateTo($event, 'vision')"
         >
           Vízió
         </button>
@@ -55,7 +50,6 @@
           routerLink="method"
           routerLinkActive="active"
           (click)="navigateTo($event, 'method')"
-          (touchstart)="navigateTo($event, 'method')"
         >
           Módszerek
         </button>
@@ -63,7 +57,6 @@
           routerLink="benefits"
           routerLinkActive="active"
           (click)="navigateTo($event, 'benefits')"
-          (touchstart)="navigateTo($event, 'benefits')"
         >
           Mire jó?
         </button>
@@ -71,7 +64,6 @@
           routerLink="services"
           routerLinkActive="active"
           (click)="navigateTo($event, 'services')"
-          (touchstart)="navigateTo($event, 'services')"
         >
           Szolgáltatások
         </button>
@@ -79,7 +71,6 @@
           routerLink="videos"
           routerLinkActive="active"
           (click)="navigateTo($event, 'videos')"
-          (touchstart)="navigateTo($event, 'videos')"
         >
           Videók
         </button>
@@ -87,7 +78,6 @@
           routerLink="contact"
           routerLinkActive="active"
           (click)="navigateTo($event, 'contact')"
-          (touchstart)="navigateTo($event, 'contact')"
         >
           Kapcsolat
         </button>
