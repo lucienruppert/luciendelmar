@@ -1,7 +1,6 @@
 :host {
-  @apply flex flex-col items-center bg-black;
+  @apply flex flex-col items-center bg-zinc-900 text-gray-200;
   min-height: calc(100vh - 60px);
-  color: grey;
 }
 
 img {

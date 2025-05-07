@@ -1,5 +1,5 @@
 :host {
-  @apply min-h-screen h-auto block w-full bg-black;
+  @apply min-h-screen h-auto block w-full;
 }
 
 .menu-spacer {
@@ -11,12 +11,12 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  @apply bg-black w-64 md:w-72 z-50;
+  @apply w-64 md:w-72 z-50;
   transition: transform 0.3s ease;
 }
 
 mat-nav-list {
-  @apply flex flex-col w-full bg-black pt-4;
+  @apply flex flex-col w-full pt-4;
 }
 
 mat-nav-list * {
@@ -24,7 +24,7 @@ mat-nav-list * {
 }
 
 mat-toolbar {
-  @apply h-[60px] flex items-center text-gold;
+  @apply h-[60px] flex items-center text-gold bg-zinc-900;
 }
 
 mat-toolbar-row {
@@ -59,7 +59,7 @@ button[mat-icon-button] {
 
 /* Make mobile navigation more visible */
 ::ng-deep .mat-drawer-inner-container {
-  @apply bg-black !important;
+  @apply bg-zinc-900 !important;
 }
 
 ::ng-deep .mat-drawer-backdrop.mat-drawer-shown {

@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply font-light text-gray-600 bg-black;
+  @apply font-light text-gray-600 bg-zinc-900;
   height: 100%;
   margin: 0;
 }
