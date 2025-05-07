@@ -2,18 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: white;
-  /* #008080 | rgb(0,128,128) */
-  --secondary: white; /* yellow */
-}
-
 html,
 body {
-  @apply font-light text-gray-600;
+  @apply font-light text-gray-600 bg-black;
   height: 100%;
   margin: 0;
-  background: var(--primary);
 }
 
 body {
@@ -22,7 +15,7 @@ body {
 
 /* Dialog backdrop styling */
 .dialog-backdrop {
-  background-color: white !important;
+  background-color: black !important;
   /* opacity: 1 !important; */
 }
 

@@ -11,11 +11,11 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  @apply bg-white;
+  @apply bg-black;
 }
 
 mat-nav-list {
-  @apply flex flex-col w-44;
+  @apply flex flex-col w-44 bg-black;
 }
 
 mat-nav-list * {
@@ -24,7 +24,6 @@ mat-nav-list * {
 
 mat-toolbar {
   @apply h-[60px] flex items-center text-gold;
-  background: var(--primary);
 }
 
 mat-toolbar-row {
