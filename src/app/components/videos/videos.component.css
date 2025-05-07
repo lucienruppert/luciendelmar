@@ -4,7 +4,7 @@
 }
 
 .thumbnail {
-  @apply cursor-pointer h-40 w-60 rounded-md mb-2;
+  @apply cursor-pointer h-40 w-60 rounded-sm mb-2;
 }
 
 .thumbnail-with-data {
