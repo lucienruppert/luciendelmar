@@ -67,6 +67,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   toggleSidenav(event: Event) {
+    // Only allow toggle on real click events (not touchstart, pointerdown, etc)
+    if (event && (event as any).type !== 'click') {
+      return;
+    }
     // Prevent the default action and stop event bubbling
     if (event) {
       event.preventDefault();
