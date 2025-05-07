@@ -79,3 +79,20 @@ button[mat-icon-button] {
 mat-nav-list button.active {
   @apply text-gray-400 border-l-2 border-gold pl-2;
 }
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  mat-sidenav {
+    /* Improve touch behavior by adding hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+  }
+
+  mat-nav-list button {
+    @apply py-4 my-2; /* Increase touch target size */
+  }
+}

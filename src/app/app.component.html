@@ -5,7 +5,7 @@
       <span class="menu-spacer"></span>
       <button
         mat-icon-button
-        (click)="sidenav.toggle()"
+        (click)="toggleSidenav($event)"
         class="flex items-center justify-center"
       >
         <mat-icon>menu</mat-icon>
@@ -16,7 +16,11 @@
   <mat-sidenav-container>
     <mat-sidenav #sidenav position="end">
       <div class="sidenav-header">
-        <button mat-icon-button (click)="sidenav.toggle()" class="close-button">
+        <button
+          mat-icon-button
+          (click)="toggleSidenav($event)"
+          class="close-button"
+        >
           <mat-icon>close</mat-icon>
         </button>
       </div>
@@ -24,49 +28,49 @@
         <button
           routerLink="about"
           routerLinkActive="active"
-          (click)="sidenav.toggle()"
+          (click)="toggleSidenav($event)"
         >
           Rólam
         </button>
         <button
           routerLink="vision"
           routerLinkActive="active"
-          (click)="sidenav.toggle()"
+          (click)="toggleSidenav($event)"
         >
           Vízió
         </button>
         <button
           routerLink="method"
           routerLinkActive="active"
-          (click)="sidenav.toggle()"
+          (click)="toggleSidenav($event)"
         >
           Módszerek
         </button>
         <button
           routerLink="benefits"
           routerLinkActive="active"
-          (click)="sidenav.toggle()"
+          (click)="toggleSidenav($event)"
         >
           Mire jó?
         </button>
         <button
           routerLink="services"
           routerLinkActive="active"
-          (click)="sidenav.toggle()"
+          (click)="toggleSidenav($event)"
         >
           Szolgáltatások
         </button>
         <button
           routerLink="videos"
           routerLinkActive="active"
-          (click)="sidenav.toggle()"
+          (click)="toggleSidenav($event)"
         >
           Videók
         </button>
         <button
           routerLink="contact"
           routerLinkActive="active"
-          (click)="sidenav.toggle()"
+          (click)="toggleSidenav($event)"
         >
           Kapcsolat
         </button>

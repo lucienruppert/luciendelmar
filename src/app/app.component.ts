@@ -30,6 +30,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 })
 export class AppComponent {
   private apiLoaded: boolean = false;
+  private isToggling: boolean = false;
   @ViewChild('sidenav') sidenav: any;
 
   ngOnInit() {
@@ -44,5 +45,29 @@ export class AppComponent {
       document.body.appendChild(tag);
       this.apiLoaded = true;
     }
+  }
+
+  toggleSidenav(event: Event) {
+    // Prevent event bubbling
+    event.preventDefault();
+    event.stopPropagation();
+
+    // Debounce to prevent multiple rapid toggles
+    if (this.isToggling) {
+      return;
+    }
+
+    this.isToggling = true;
+
+    // Add a small delay before actually toggling to prevent ghost clicks
+    // This is specifically helpful for mobile browsers
+    setTimeout(() => {
+      this.sidenav.toggle();
+
+      // Reset after a short delay
+      setTimeout(() => {
+        this.isToggling = false;
+      }, 300);
+    }, 10);
   }
 }
