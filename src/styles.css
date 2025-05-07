@@ -13,10 +13,8 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* Dialog backdrop styling */
 .dialog-backdrop {
-  background-color: black !important;
-  /* opacity: 1 !important; */
+  @apply bg-zinc-900;
 }
 
 .video-dialog {

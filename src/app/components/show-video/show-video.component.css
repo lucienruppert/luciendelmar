@@ -1,21 +1,11 @@
 .close {
-  @apply text-center bg-zinc-900;
-  width: 100%;
+  @apply text-center bg-zinc-900 w-full;
 }
 
 .icon {
-  width: 2rem;
-  height: 2rem;
-  font-size: 2rem;
-  padding-bottom: 1rem;
-  color: red;
+  @apply w-11 h-11 text-5xl pb-4 text-gold;
 }
 
 .player-error {
-  background-color: #f8d7da;
-  color: #721c24;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 4px;
-  text-align: center;
+  @apply bg-red-100 text-red-900 p-4 mt-4 text-center;
 }
