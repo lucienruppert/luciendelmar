@@ -1,5 +1,5 @@
 :host {
-  @apply min-h-screen h-auto block w-full;
+  @apply min-h-screen h-auto block w-full bg-black;
 }
 
 .menu-spacer {
@@ -11,12 +11,11 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-  background: var(--primary);
+  @apply bg-white;
 }
 
 mat-nav-list {
   @apply flex flex-col w-44;
-  background: var(--primary);
 }
 
 mat-nav-list * {
@@ -24,9 +23,8 @@ mat-nav-list * {
 }
 
 mat-toolbar {
-  @apply h-[60px] flex items-center;
+  @apply h-[60px] flex items-center text-gold;
   background: var(--primary);
-  color: var(--secondary);
 }
 
 mat-toolbar-row {
@@ -34,15 +32,15 @@ mat-toolbar-row {
 }
 
 .brand {
-  @apply text-lg;
+  @apply text-2xl;
 }
 
 .active {
-  color: #ffd700;
+  @apply text-white;
 }
 
 button {
-  @apply px-3 py-3 text-sm font-normal;
+  @apply px-3 py-3 text-lg font-light;
 }
 
 .content-container {

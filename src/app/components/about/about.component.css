@@ -1,7 +1,6 @@
 :host {
-  @apply flex flex-col items-center bg-white;
+  @apply flex flex-col items-center;
   min-height: calc(100vh - 60px);
-  color: grey;
 }
 
 img {
@@ -18,5 +17,5 @@ img {
 }
 
 .title {
-  color: var(--primary);
+  @apply text-gold
 }

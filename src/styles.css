@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --primary: teal;
+  --primary: white;
   /* #008080 | rgb(0,128,128) */
-  --secondary: #ffd700; /* yellow */
+  --secondary: white; /* yellow */
 }
 
 html,
 body {
-  @apply font-light h-full m-0 bg-white;
+  @apply font-light text-gray-600;
+  height: 100%;
+  margin: 0;
   background: var(--primary);
 }
 
