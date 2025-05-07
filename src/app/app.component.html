@@ -4,14 +4,13 @@
       <button
         mat-icon-button
         (click)="sidenav.toggle()"
-        fxShow="true"
-        fxHide.gt-sm
+        class="block md:hidden"
       >
         <mat-icon>menu</mat-icon>
       </button>
       <span routerLink="/" class="cursor-pointer brand">Lucien del Mar</span>
       <span class="menu-spacer"></span>
-      <div fxShow="true" fxHide.lt-md>
+      <div class="hidden md:block">
         <button routerLink="about" routerLinkActive="active">Rólam</button>
         <button routerLink="vision" routerLinkActive="active">Vízió</button>
         <button routerLink="method" routerLinkActive="active">Módszer</button>
@@ -53,6 +52,5 @@
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
-
   </mat-sidenav-container>
 </div>

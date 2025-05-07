@@ -45,6 +45,15 @@ export class AppComponent {
       document.body.appendChild(tag);
       this.apiLoaded = true;
     }
-    if (window.screen.width <= 768) this.isMobile = true;
+
+    // Check for mobile and update when resize
+    this.checkScreenSize();
+    window.addEventListener('resize', () => {
+      this.checkScreenSize();
+    });
+  }
+
+  checkScreenSize() {
+    this.isMobile = window.innerWidth <= 768;
   }
 }

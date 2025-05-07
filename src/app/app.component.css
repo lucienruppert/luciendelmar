@@ -7,11 +7,11 @@
 }
 
 mat-sidenav-container {
-  height: 100%;
+  @apply h-full min-h-[calc(100vh-60px)];
 }
 
 mat-sidenav {
-  @apply bg-black;
+  @apply bg-black w-64 md:w-72 z-50;
 }
 
 mat-nav-list {
@@ -44,4 +44,14 @@ button {
 
 .content-container {
   @apply max-w-[900px] mx-auto px-4;
+}
+
+/* Hamburger menu icon styling */
+mat-icon {
+  @apply text-gold;
+}
+
+/* Ensure menu button is visible on mobile */
+button[mat-icon-button] {
+  @apply flex items-center justify-center;
 }
