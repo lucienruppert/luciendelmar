@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
-import { MethodComponent } from './components/method/method.component';
+import { MethodsComponent } from './components/methods/methods.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VisionComponent } from './components/vision/vision.component';
 import { HomeComponent } from './components/home/home.component';
@@ -23,8 +23,8 @@ export const routes: Routes = [
     data: { prerender: true }
   },
   {
-    path: 'method',
-    component: MethodComponent,
+    path: 'methods',
+    component: MethodsComponent,
     data: { prerender: true }
   },
   {
