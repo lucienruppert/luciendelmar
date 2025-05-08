@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { MethodsComponent } from './components/methods/methods.component';
+import { CirclingComponent } from './circling/circling.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VisionComponent } from './components/vision/vision.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,41 +16,46 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent,
     // Add prerender option for all routes
-    data: { prerender: true }
+    data: { prerender: true },
   },
   {
     path: 'about',
     component: AboutComponent,
-    data: { prerender: true }
+    data: { prerender: true },
   },
   {
     path: 'methods',
     component: MethodsComponent,
-    data: { prerender: true }
+    data: { prerender: true },
+  },
+  {
+    path: 'circling',
+    component: CirclingComponent,
+    data: { prerender: true },
   },
   {
     path: 'videos',
     component: VideosComponent,
-    data: { prerender: true }
+    data: { prerender: true },
   },
   {
     path: 'vision',
     component: VisionComponent,
-    data: { prerender: true }
+    data: { prerender: true },
   },
   {
     path: 'services',
     component: ServicesComponent,
-    data: { prerender: true }
+    data: { prerender: true },
   },
   {
     path: 'contact',
     component: ContactComponent,
-    data: { prerender: true }
+    data: { prerender: true },
   },
   {
     path: 'benefits',
     component: BenefitsComponent,
-    data: { prerender: true }
+    data: { prerender: true },
   },
 ];
