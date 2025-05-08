@@ -12,7 +12,7 @@ mat-sidenav-container {
 
 mat-sidenav {
   @apply w-64 md:w-72 z-50 bg-zinc-900;
-  transition: transform 0.3s ease;
+  /* Removed custom transition to avoid double-slide glitch */
 }
 
 mat-nav-list {
@@ -55,6 +55,13 @@ mat-icon {
 /* Button styling for the menu toggle */
 button[mat-icon-button] {
   @apply flex items-center justify-center;
+}
+
+/* Prevent ghost clicks on mobile */
+.hamburger-button,
+.close-button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Make mobile navigation more visible */
