@@ -59,18 +59,15 @@
         >
           Vízió
         </button>
-        <button
-          routerLink="methods"
-          routerLinkActive="active"
-          (click)="navigateTo($event, 'methods')"
-        >
+        <button routerLinkActive="active" (click)="toggleSubmenu('methods')">
           Módszerek
         </button>
         <!-- Submenu for circling under methods -->
         <button
-          routerLink="circling"
+          *ngIf="showMethodsSubmenu"
+          routerLink="methods/circling"
           routerLinkActive="active"
-          (click)="navigateTo($event, 'circling')"
+          (click)="navigateTo($event, 'methods/circling')"
           class="pl-6 text-sm"
         >
           Circling

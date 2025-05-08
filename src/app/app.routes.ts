@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
-import { MethodsComponent } from './components/methods/methods.component';
 import { CirclingComponent } from './components/circling/circling.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VisionComponent } from './components/vision/vision.component';
@@ -25,11 +24,11 @@ export const routes: Routes = [
   },
   {
     path: 'methods',
-    component: MethodsComponent,
-    data: { prerender: true },
+    redirectTo: 'methods/circling',
+    pathMatch: 'full',
   },
   {
-    path: 'circling',
+    path: 'methods/circling',
     component: CirclingComponent,
     data: { prerender: true },
   },
