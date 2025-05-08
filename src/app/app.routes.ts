@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from './components/about/about.component';
+import { PathComponent } from './components/path/path.component';
 import { CirclingComponent } from './components/circling/circling.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VisionComponent } from './components/vision/vision.component';
@@ -17,8 +17,8 @@ export const routes: Routes = [
     data: { prerender: true },
   },
   {
-    path: 'about',
-    component: AboutComponent,
+    path: 'path',
+    component: PathComponent,
     data: { prerender: true },
   },
   {

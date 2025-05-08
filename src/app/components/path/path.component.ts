@@ -8,9 +8,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'about',
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css',
+  selector: 'path',
+  templateUrl: './path.component.html',
+  styleUrl: './path.component.css',
   standalone: true,
   imports: [
     CommonModule,
@@ -22,4 +22,4 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule,
   ],
 })
-export class AboutComponent {}
+export class PathComponent {}
