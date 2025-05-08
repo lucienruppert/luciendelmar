@@ -6,7 +6,6 @@ import { VisionComponent } from './components/vision/vision.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { BenefitsComponent } from './components/benefits/benefits.component';
 import { ShowVideoComponent } from './components/show-video/show-video.component';
 
 export default [ShowVideoComponent];
@@ -50,11 +49,6 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
-    data: { prerender: true },
-  },
-  {
-    path: 'benefits',
-    component: BenefitsComponent,
     data: { prerender: true },
   },
 ];
