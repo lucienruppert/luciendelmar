@@ -59,8 +59,15 @@
         >
           Vízió
         </button>
-        <button routerLinkActive="active" (click)="toggleSubmenu('methods')">
+        <button
+          routerLinkActive="active"
+          (click)="toggleSubmenu('methods')"
+          class="flex items-center"
+        >
           Módszerek
+          <mat-icon class="ml-1 text-sm">{{
+            showMethodsSubmenu ? "expand_less" : "expand_more"
+          }}</mat-icon>
         </button>
         <!-- Submenu for circling under methods -->
         <button
@@ -68,7 +75,7 @@
           routerLink="methods/circling"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/circling')"
-          class="pl-6 text-sm"
+          class="submenu-item"
         >
           Circling
         </button>

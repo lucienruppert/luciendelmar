@@ -20,7 +20,7 @@ mat-nav-list {
 }
 
 mat-nav-list * {
-  @apply mb-4 text-start ml-5 pl-0 py-2;
+  @apply mb-2 text-start ml-5 pl-0 py-1;
 }
 
 mat-toolbar {
@@ -40,7 +40,7 @@ mat-toolbar-row {
 }
 
 button {
-  @apply px-3 py-2 text-lg font-light text-gray-400;
+  @apply px-3 py-1 text-lg font-light text-gray-400;
 }
 
 .content-container {
@@ -91,6 +91,28 @@ mat-nav-list button:hover {
   @apply text-gold;
 }
 
+/* Submenu item styling */
+mat-nav-list button.submenu-item {
+  @apply pl-8 text-sm relative border-l border-gray-700 ml-4 transition-all py-0.5 my-0.5;
+}
+
+mat-nav-list button.submenu-item::before {
+  content: "";
+  @apply absolute w-2 h-2 rounded-full bg-gray-500 left-2 top-1/2 -translate-y-1/2;
+}
+
+mat-nav-list button.submenu-item:hover::before {
+  @apply bg-gold;
+}
+
+mat-nav-list button.submenu-item.active {
+  @apply border-l-0 border-gold pl-8;
+}
+
+mat-nav-list button.submenu-item.active::before {
+  @apply bg-gold;
+}
+
 /* Mobile-specific fixes */
 @media (max-width: 768px) {
   /* Key fixes for the menu toggle issue */
@@ -101,7 +123,7 @@ mat-nav-list button:hover {
 
   /* Adjust nav item height for mobile */
   mat-nav-list button {
-    @apply py-2 my-1;
+    @apply py-1 my-1;
   }
 
   /* Make sure buttons have proper touch behavior */
