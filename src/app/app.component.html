@@ -1,12 +1,4 @@
 <div>
-  <!-- Global Navigation Event Log -->
-  <div *ngIf="navLog.logs.length" class="p-2 bg-yellow-100 text-sm text-black">
-    <strong>Global Nav Log:</strong>
-    <ul>
-      <li *ngFor="let entry of navLog.logs">{{ entry }}</li>
-    </ul>
-    <button mat-button (click)="navLog.clear()">Clear Log</button>
-  </div>
   <mat-toolbar>
     <mat-toolbar-row>
       <span routerLink="/" class="cursor-pointer brand">Lucien del Mar</span>
@@ -24,11 +16,11 @@
   <mat-sidenav-container>
     <mat-sidenav
       #sidenav
-      (openedStart)="navLog.add('sidenav openedStart')"
-      (opened)="navLog.add('sidenav opened')"
-      (openedChange)="navLog.add('openedChange:' + $event)"
-      (closedStart)="navLog.add('sidenav closedStart')"
-      (closed)="navLog.add('sidenav closed')"
+      position="end"
+      [disableClose]="false"
+      [autoFocus]="false"
+      [fixedInViewport]="true"
+      mode="over"
       position="end"
       [disableClose]="true"
       [autoFocus]="false"
