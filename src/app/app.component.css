@@ -93,7 +93,7 @@ mat-nav-list button:hover {
 
 /* Submenu item styling */
 mat-nav-list button.submenu-item {
-  @apply pl-8 text-sm relative border-l border-gray-700 ml-4 transition-all py-0.5 my-0.5;
+  @apply pl-8 text-sm relative border-l border-gray-700 ml-4 transition-all pt-0.5 pb-1.5 my-0.5;
 }
 
 mat-nav-list button.submenu-item::before {
