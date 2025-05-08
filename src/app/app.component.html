@@ -46,16 +46,31 @@
           Kezdőlap
         </button>
         <button
+          routerLinkActive="active"
+          (click)="toggleSubmenu('rolam')"
+          class="flex items-center"
+        >
+          Rólam
+          <mat-icon class="ml-1 text-sm">{{
+            showAboutSubmenu ? "expand_less" : "expand_more"
+          }}</mat-icon>
+        </button>
+        <!-- Submenu for About -->
+        <button
+          *ngIf="showAboutSubmenu"
           routerLink="path"
           routerLinkActive="active"
           (click)="navigateTo($event, 'path')"
+          class="submenu-item"
         >
           Utam
         </button>
         <button
+          *ngIf="showAboutSubmenu"
           routerLink="vision"
           routerLinkActive="active"
           (click)="navigateTo($event, 'vision')"
+          class="submenu-item"
         >
           Vízióm
         </button>

@@ -40,6 +40,7 @@ export class AppComponent implements AfterViewInit {
   private lastToggleTime: number = 0;
   @ViewChild('sidenav') sidenav!: MatSidenav;
   showMethodsSubmenu: boolean = false;
+  showAboutSubmenu: boolean = false;
 
   // expose navLog publicly for template binding
   constructor(private cdr: ChangeDetectorRef, public navLog: NavLogService) {}
@@ -103,11 +104,14 @@ export class AppComponent implements AfterViewInit {
     }
   }
 
-  // Toggle submenu for methods
+  // Toggle submenu for methods and rolam
   toggleSubmenu(submenu: string) {
     if (submenu === 'methods') {
       this.showMethodsSubmenu = !this.showMethodsSubmenu;
       this.navLog.add('Toggled methods submenu to: ' + this.showMethodsSubmenu);
+    } else if (submenu === 'rolam') {
+      this.showAboutSubmenu = !this.showAboutSubmenu;
+      this.navLog.add('Toggled rolam submenu to: ' + this.showAboutSubmenu);
     }
     // Don't close sidenav when toggling submenu
   }
