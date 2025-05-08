@@ -2,50 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://luciendelmar.com/</loc>
-    <lastmod>2025-05-07</lastmod>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://luciendelmar.com/about</loc>
-    <lastmod>2025-05-07</lastmod>
+    <loc>https://luciendelmar.com/path</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://luciendelmar.com/method</loc>
-    <lastmod>2025-05-07</lastmod>
+    <loc>https://luciendelmar.com/methods/circling</loc>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://luciendelmar.com/videos</loc>
-    <lastmod>2025-05-07</lastmod>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://luciendelmar.com/vision</loc>
-    <lastmod>2025-05-07</lastmod>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://luciendelmar.com/services</loc>
-    <lastmod>2025-05-07</lastmod>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://luciendelmar.com/contact</loc>
-    <lastmod>2025-05-07</lastmod>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://luciendelmar.com/benefits</loc>
-    <lastmod>2025-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
