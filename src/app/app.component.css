@@ -93,7 +93,7 @@ mat-nav-list button:hover {
 
 /* Submenu item styling */
 mat-nav-list button.submenu-item {
-  @apply pl-10 text-base relative border-l-0 ml-4 transition-all pt-0.5 pb-1.5 my-0.5;
+  @apply pl-6 text-base relative border-l-0 ml-4 transition-all pt-0.5 pb-1.5 my-0.5;
 }
 
 /* Remove bullet points by commenting out the ::before pseudo-element */
@@ -107,7 +107,7 @@ mat-nav-list button.submenu-item {
 } */
 
 mat-nav-list button.submenu-item.active {
-  @apply border-l-0 border-gold pl-10;
+  @apply border-l-0 border-gold pl-6;
 }
 
 /* mat-nav-list button.submenu-item.active::before {
