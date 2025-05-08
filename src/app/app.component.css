@@ -86,6 +86,10 @@ button[mat-icon-button] {
 mat-nav-list button.active {
   @apply text-gray-400 border-l-2 border-gold pl-2;
 }
+/* Hover link styling in sidenav */
+mat-nav-list button:hover {
+  @apply text-gold;
+}
 
 /* Mobile-specific fixes */
 @media (max-width: 768px) {
