@@ -99,9 +99,9 @@ mat-nav-list button:hover {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Larger touch targets for mobile */
+  /* Adjust nav item height for mobile */
   mat-nav-list button {
-    @apply py-4 my-2;
+    @apply py-2 my-1;
   }
 
   /* Make sure buttons have proper touch behavior */
