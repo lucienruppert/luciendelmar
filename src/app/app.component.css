@@ -93,25 +93,26 @@ mat-nav-list button:hover {
 
 /* Submenu item styling */
 mat-nav-list button.submenu-item {
-  @apply pl-8 text-sm relative border-l border-gray-700 ml-4 transition-all pt-0.5 pb-1.5 my-0.5;
+  @apply pl-10 text-base relative border-l-0 ml-4 transition-all pt-0.5 pb-1.5 my-0.5;
 }
 
-mat-nav-list button.submenu-item::before {
+/* Remove bullet points by commenting out the ::before pseudo-element */
+/* mat-nav-list button.submenu-item::before {
   content: "";
   @apply absolute w-2 h-2 rounded-full bg-gray-500 left-2 top-1/2 -translate-y-1/2;
-}
+} */
 
-mat-nav-list button.submenu-item:hover::before {
+/* mat-nav-list button.submenu-item:hover::before {
   @apply bg-gold;
-}
+} */
 
 mat-nav-list button.submenu-item.active {
-  @apply border-l-0 border-gold pl-8;
+  @apply border-l-0 border-gold pl-10;
 }
 
-mat-nav-list button.submenu-item.active::before {
+/* mat-nav-list button.submenu-item.active::before {
   @apply bg-gold;
-}
+} */
 
 /* Mobile-specific fixes */
 @media (max-width: 768px) {
