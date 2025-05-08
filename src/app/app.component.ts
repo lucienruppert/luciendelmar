@@ -4,6 +4,7 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
 } from '@angular/core';
+import { NavLogService } from './services/nav-log.service';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
@@ -39,7 +40,8 @@ export class AppComponent implements AfterViewInit {
   private lastToggleTime: number = 0;
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  // expose navLog publicly for template binding
+  constructor(private cdr: ChangeDetectorRef, public navLog: NavLogService) {}
 
   ngOnInit() {
     // Skip DOM and window operations on the server
@@ -79,17 +81,21 @@ export class AppComponent implements AfterViewInit {
     this.lastToggleTime = now;
     // Open if not already open
     if (this.sidenav && !this.sidenav.opened) {
+      this.navLog.add('Opening sidenav');
       this.sidenav.open();
     }
   }
 
   /** Closes the sidenav explicitly on close button or navigation */
   closeSidenav(event?: Event) {
+    // Log close action
+    this.navLog.add('closeSidenav triggered');
     if (event) {
       event.preventDefault();
       event.stopPropagation();
     }
     if (this.sidenav && this.sidenav.opened) {
+      this.navLog.add('sidenav.close()');
       this.sidenav.close();
     }
   }

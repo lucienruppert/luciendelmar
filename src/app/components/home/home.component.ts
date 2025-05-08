@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavLogService } from '../../services/nav-log.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
@@ -24,7 +25,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   ],
 })
 export class HomeComponent {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    public navLog: NavLogService
+  ) {}
 
   public goToBenefitsPage(): void {
     this.router.navigate(['benefits'], {
