@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { MethodsComponent } from './components/methods/methods.component';
-import { CirclingComponent } from './circling/circling.component';
+import { CirclingComponent } from './components/circling/circling.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VisionComponent } from './components/vision/vision.component';
 import { HomeComponent } from './components/home/home.component';
