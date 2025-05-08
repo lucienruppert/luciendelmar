@@ -38,6 +38,14 @@
       </div>
       <mat-nav-list>
         <button
+          routerLink=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="navigateTo($event, '')"
+        >
+          Kezdőlap
+        </button>
+        <button
           routerLink="about"
           routerLinkActive="active"
           (click)="navigateTo($event, 'about')"
