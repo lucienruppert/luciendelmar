@@ -70,6 +70,8 @@ export class AppComponent implements AfterViewInit {
 
   /** Opens the sidenav explicitly on hamburger click */
   openSidenav(event: Event) {
+    // Log entry
+    this.navLog.add('openSidenav triggered, event:' + event.type);
     // Prevent default and stop other handlers
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -89,7 +91,7 @@ export class AppComponent implements AfterViewInit {
   /** Closes the sidenav explicitly on close button or navigation */
   closeSidenav(event?: Event) {
     // Log close action
-    this.navLog.add('closeSidenav triggered');
+    this.navLog.add('closeSidenav triggered, event:' + (event?.type || 'none'));
     if (event) {
       event.preventDefault();
       event.stopPropagation();
@@ -102,7 +104,7 @@ export class AppComponent implements AfterViewInit {
 
   // Separate method for navigation
   navigateTo(event: Event, route: string) {
-    // Prevent the default action and stop event bubbling
+    this.navLog.add('navigateTo triggered: ' + route + ', event:' + event.type);
     if (event) {
       event.preventDefault();
       event.stopPropagation();
@@ -115,6 +117,7 @@ export class AppComponent implements AfterViewInit {
 
     // Simply close the sidenav if it exists and is open
     if (this.sidenav && this.sidenav.opened) {
+      this.navLog.add('sidenav.close() via navigateTo');
       this.sidenav.close();
     }
   }
