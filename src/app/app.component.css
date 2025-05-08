@@ -28,11 +28,11 @@ mat-toolbar {
 }
 
 mat-toolbar-row {
-  @apply w-full max-w-[1200px] mx-auto px-4 flex items-center justify-between;
+  @apply w-full max-w-[920px] mx-auto px-4 flex items-center justify-between;
 }
 
 .brand {
-  @apply text-2xl font-light;
+  @apply text-2xl font-light pl-4;
 }
 
 .active {
