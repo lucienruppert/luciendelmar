@@ -14,11 +14,8 @@
       <button
         mat-icon-button
         class="flex items-center justify-center hamburger-button"
-        (touchstart)="navLog.add('hamburger touchstart')"
-        (touchend)="navLog.add('hamburger touchend')"
-        (mousedown)="navLog.add('hamburger mousedown')"
-        (mouseup)="navLog.add('hamburger mouseup')"
-        (click)="openSidenav($event)"
+        (pointerdown)="navLog.add('hamburger pointerdown')"
+        (pointerup)="navLog.add('hamburger pointerup'); openSidenav($event)"
       >
         <mat-icon>menu</mat-icon>
       </button>
