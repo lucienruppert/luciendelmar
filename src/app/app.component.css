@@ -44,7 +44,7 @@ button {
 }
 
 .content-container {
-  @apply max-w-[900px] mx-auto px-4;
+  @apply max-w-[900px] mx-auto px-4 flex justify-center;
 }
 
 /* Icon styling */
