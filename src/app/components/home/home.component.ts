@@ -31,12 +31,6 @@ export class HomeComponent {
     public navLog: NavLogService
   ) {}
 
-  public goToBenefitsPage(): void {
-    this.router.navigate(['benefits'], {
-      relativeTo: this.route,
-    });
-  }
-
   public goToVisionPage(): void {
     this.router.navigate(['vision'], {
       relativeTo: this.route,
