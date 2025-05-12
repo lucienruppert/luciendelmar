@@ -1,10 +1,10 @@
 :host {
-  @apply flex flex-col items-center bg-zinc-900 text-gray-400;
+  @apply flex flex-col items-center bg-zinc-900 text-gray-400 text-lg;
   min-height: calc(100vh - 60px);
 }
 
 span {
-  @apply text-xl my-5;
+  @apply text-xl mb-5 mt-16 text-gold;
 }
 
 p {
@@ -17,4 +17,8 @@ p {
 
 main {
   @apply flex flex-col items-center;
+}
+
+button {
+  @apply bg-gold text-white px-10 py-2 font-light rounded-md hover:bg-gold/80 transition duration-300 mt-10;
 }
