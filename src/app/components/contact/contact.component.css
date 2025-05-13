@@ -6,18 +6,6 @@
   line-height: 35px;
 }
 
-span {
-  @apply text-xl mt-10;
-}
-
-p {
-  @apply text-center mt-3 mb-10;
-  line-height: 1.6;
-}
-
-.title {
-  @apply mt-10;
-}
 
 .map-container {
   @apply my-6 relative;
