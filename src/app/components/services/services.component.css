@@ -1,9 +1,9 @@
 :host {
-  @apply flex flex-col items-center bg-zinc-900 text-gray-400 text-lg min-h-screen w-[500px];
+  @apply flex flex-col items-center bg-zinc-900 text-gray-400 text-lg min-h-screen w-[700px];
 }
 
 span {
-  @apply text-xl mb-5 mt-16 text-gold;
+  @apply text-xl mb-5 mt-12 text-gold;
 }
 
 p {
