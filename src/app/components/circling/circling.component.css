@@ -1,5 +1,5 @@
 :host {
-  @apply flex flex-col items-center bg-zinc-900 text-gray-400 min-h-screen;
+  @apply flex flex-col items-center bg-zinc-900 text-gray-400 min-h-screen text-lg;
 }
 
 span {
@@ -7,11 +7,11 @@ span {
 }
 
 .text {
-  @apply ml-5;
+  @apply ml-5 mb-8;
 }
 
 .highlight {
-  @apply text-lg my-5;
+  @apply text-lg my-5 text-gold;
 }
 
 @media (max-width: 768px) {
