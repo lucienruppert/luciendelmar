@@ -2,8 +2,12 @@
   @apply flex flex-col items-center bg-zinc-900 text-gray-400 min-h-screen text-lg;
 }
 
+.item-description {
+  @apply pl-12 mt-5 text-base;
+}
+
 img {
-  @apply ml-5  float-right;
+  @apply ml-10  float-right;
 }
 
 @media (max-width: 768px) {
