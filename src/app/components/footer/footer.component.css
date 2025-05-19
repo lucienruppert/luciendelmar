@@ -1,3 +1,8 @@
 .container {
   border-top: 1px solid #a18e58;
+  @apply w-full max-w-[650px] mx-auto pt-4 px-4 sm:px-6;
+}
+
+.internal {
+  @apply text-gold text-sm text-center w-full max-w-[600px] mx-auto mb-10 px-4 sm:px-6;
 }
