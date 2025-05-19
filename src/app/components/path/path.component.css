@@ -17,6 +17,9 @@ img {
   main {
     @apply w-4/5;
   }
+  .item-description {
+    @apply px-4;
+  }
 }
 
 .title {
