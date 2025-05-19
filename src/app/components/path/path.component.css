@@ -22,3 +22,7 @@ img {
 .title {
   @apply text-gold;
 }
+
+a {
+  @apply text-gold hover:text-gold/80;
+}
