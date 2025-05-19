@@ -18,7 +18,7 @@ img {
     @apply w-4/5;
   }
   .item-description {
-    @apply px-4;
+    @apply px-4 text-left;
   }
 }
 
