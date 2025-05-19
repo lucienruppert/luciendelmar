@@ -3,7 +3,7 @@
 }
 
 .item-description {
-  @apply pl-12 mt-5 text-base;
+  @apply pl-12 mt-5 text-base text-justify;
 }
 
 img {
