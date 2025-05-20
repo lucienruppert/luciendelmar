@@ -23,3 +23,7 @@ li {
     @apply w-4/5;
   }
 }
+
+hr {
+  @apply border-gray-400 mb-5;
+}
