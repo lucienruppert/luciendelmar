@@ -79,7 +79,15 @@
             showMethodsSubmenu ? "expand_less" : "expand_more"
           }}</mat-icon>
         </button>
-        <!-- Submenu for circling under methods -->
+        <button
+        *ngIf="showMethodsSubmenu"
+        routerLink="methods/regression-therapy"
+        routerLinkActive="active"
+        (click)="navigateTo($event, 'methods/regression-therapy')"
+        class="submenu-item"
+      >
+        Érzelmi Oldás
+      </button>
         <button
           *ngIf="showMethodsSubmenu"
           routerLink="methods/circling"

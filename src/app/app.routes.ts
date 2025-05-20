@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ShowVideoComponent } from './components/show-video/show-video.component';
+import { RegresssionTherapyComponent } from './components/regresssion-therapy/regresssion-therapy.component';
 
 export default [ShowVideoComponent];
 export const routes: Routes = [
@@ -22,13 +23,13 @@ export const routes: Routes = [
     data: { prerender: true },
   },
   {
-    path: 'methods',
-    redirectTo: 'methods/circling',
-    pathMatch: 'full',
-  },
-  {
     path: 'methods/circling',
     component: CirclingComponent,
+    data: { prerender: true },
+  },
+  {
+    path: 'methods/regression-therapy',
+    component: RegresssionTherapyComponent,
     data: { prerender: true },
   },
   {
