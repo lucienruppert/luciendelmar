@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     MatMenuModule,
     MatIconModule,
     MatButtonModule,

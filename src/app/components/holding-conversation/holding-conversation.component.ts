@@ -7,14 +7,12 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './holding-conversation.component.html',
-  styleUrls: ['./holding-conversation.component.css']
+  styleUrls: ['./holding-conversation.component.css'],
 })
 export class HoldingConversationComponent {
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   public goToContactPage(): void {
-    this.router.navigate(['..', 'contact'], {
-      relativeTo: this.route,
-    });
+    this.router.navigate(['/contact']);
   }
 }
