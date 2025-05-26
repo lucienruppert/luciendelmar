@@ -17,3 +17,7 @@ span {
 .sub-highlight {
   @apply text-lg my-5 text-gold font-normal;
 }
+
+button {
+  @apply bg-gold text-white px-10 py-2 font-light rounded-md hover:bg-gold/80 transition duration-300 mt-10;
+}
