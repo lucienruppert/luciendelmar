@@ -86,7 +86,16 @@
           (click)="navigateTo($event, 'methods/holding-conversation')"
           class="submenu-item"
         >
-          Megtartó Beszélgetés
+          Megtartó beszélgetés
+        </button>
+        <button
+          *ngIf="showMethodsSubmenu"
+          routerLink="methods/holistic-pulsing"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/holistic-pulsing')"
+          class="submenu-item"
+        >
+          Ringató masszázs
         </button>
         <button
           *ngIf="showMethodsSubmenu"

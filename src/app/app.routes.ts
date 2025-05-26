@@ -9,6 +9,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ShowVideoComponent } from './components/show-video/show-video.component';
 import { RegresssionTherapyComponent } from './components/regresssion-therapy/regresssion-therapy.component';
 import { HoldingConversationComponent } from './components/holding-conversation/holding-conversation.component';
+import { HolisticPulsingComponent } from './components/holistic-pulsing/holistic-pulsing.component';
 
 export default [ShowVideoComponent];
 export const routes: Routes = [
@@ -56,6 +57,11 @@ export const routes: Routes = [
   {
     path: 'methods/holding-conversation',
     component: HoldingConversationComponent,
+    data: { prerender: true },
+  },
+  {
+    path: 'methods/holistic-pulsing',
+    component: HolisticPulsingComponent,
     data: { prerender: true },
   },
 ];
