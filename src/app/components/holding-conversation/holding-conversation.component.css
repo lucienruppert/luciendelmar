@@ -1,1 +1,25 @@
-/* Add your component-specific styles here */
+:host {
+  @apply flex flex-col items-center bg-zinc-900 text-gray-400 min-h-screen text-lg;
+}
+
+span {
+  @apply inline-block;
+}
+
+.text {
+  @apply ml-5 mb-8;
+}
+
+.highlight {
+  @apply text-xl my-5 text-gold font-normal;
+}
+
+.sub-highlight {
+  @apply text-lg my-5 text-gold font-normal;
+}
+
+@media (max-width: 768px) {
+  main {
+    @apply w-4/5;
+  }
+}
