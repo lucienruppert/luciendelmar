@@ -8,6 +8,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ShowVideoComponent } from './components/show-video/show-video.component';
 import { RegresssionTherapyComponent } from './components/regresssion-therapy/regresssion-therapy.component';
+import { HoldingConversationComponent } from './components/holding-conversation/holding-conversation.component';
 
 export default [ShowVideoComponent];
 export const routes: Routes = [
@@ -50,6 +51,11 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+    data: { prerender: true },
+  },
+  {
+    path: 'methods/holding-conversation',
+    component: HoldingConversationComponent,
     data: { prerender: true },
   },
 ];

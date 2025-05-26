@@ -80,14 +80,23 @@
           }}</mat-icon>
         </button>
         <button
-        *ngIf="showMethodsSubmenu"
-        routerLink="methods/regression-therapy"
-        routerLinkActive="active"
-        (click)="navigateTo($event, 'methods/regression-therapy')"
-        class="submenu-item"
-      >
-        Érzelmi Oldás
-      </button>
+          *ngIf="showMethodsSubmenu"
+          routerLink="methods/holding-conversation"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/holding-conversation')"
+          class="submenu-item"
+        >
+          Megtartó Beszélgetés
+        </button>
+        <button
+          *ngIf="showMethodsSubmenu"
+          routerLink="methods/regression-therapy"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/regression-therapy')"
+          class="submenu-item"
+        >
+          Érzelmi Oldás
+        </button>
         <button
           *ngIf="showMethodsSubmenu"
           routerLink="methods/circling"
