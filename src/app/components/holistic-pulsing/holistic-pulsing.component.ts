@@ -13,7 +13,7 @@ export class HolisticPulsingComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   public goToContactPage(): void {
-    this.router.navigate(['/services']).then(() => {
+    this.router.navigate(['/contact']).then(() => {
       window.scrollTo(0, 0);
     });
   }
