@@ -18,37 +18,42 @@
   </p>
   <span>Eszköztár</span>
   <p>
-    A célodtól, a megoldandódtól függően választom ki a megfelelő módszert, és
-    ahogy haladunk, akár több eszközt is használni fogok vagy megtanítok neked.
+    A célodtól, a megoldandódtól függően választom ki az alkalmazott
+    megközelítést, és ahogy haladunk, akár több technikát is használni fogok
+    vagy akár meg is tanítok neked.
   </p>
-  <p class="my-5">Jelenleg használt eszközeim:</p>
-  <ul class="list-disc pl-6 mb-4">
-    <li>
-      <a routerLink="/methods/circling" class="text-gold hover:underline"
-        >Circling</a
-      >
-    </li>
+  <p class="my-5">Jelenleg használt eszközeim</p>
+  <ul
+    class="pl-6 mb-4 marker:text-gold [&>li]:flex [&>li]:items-center [&>li]:before:content-['•'] [&>li]:before:text-gold [&>li]:before:mr-2"
+  >
     <li>
       <a
-        routerLink="/methods/regression-therapy"
-        class="text-gold hover:underline"
-        >Regressziós terápia</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/methods/holding-conversation"
-        class="text-gold hover:underline"
+        (click)="navigateWithScroll('/methods/holding-conversation')"
+        class="text-gold cursor-pointer"
         >Megtartó beszélgetés</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="navigateWithScroll('/methods/regression-therapy')"
+        class="text-gold cursor-pointer"
+        >Érzelmi oldás</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="navigateWithScroll('/methods/circling')"
+        class="text-gold cursor-pointer"
+        >Circling</a
       >
     </li>
   </ul>
   <span>Helyszín</span>
   <p>
-    Az egyéni ülések, kezelések kizárólag személyesen, Dunabogdányban a
+    Az egyéni ülések, kezelések kizárólag személyesen, a
     <a href="https://csudahely.hu/" target="_blank" class="text-gold"
-      >Csudahelyen (Budapesttől fél órányira)</a
-    >, vagy Budapesten, előre leegyeztetett helyen zajlanak.
+      >Csudahelyen</a
+    > (Dunabogdányban, Budapesttől fél órányira), vagy a fővárosban, előre leegyeztetett helyszínen zajlanak.
   </p>
   <span>Ár</span>
   <p>18.000 Ft / óra</p>
