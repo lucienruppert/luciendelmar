@@ -27,6 +27,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 export class ServicesComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
+  public navigateWithScroll(path: string): void {
+    this.router.navigate([path]).then(() => {
+      window.scrollTo(0, 0);
+    });
+  }
+
   public goToContactPage(): void {
     this.router.navigate(['..', 'contact'], {
       relativeTo: this.route,
