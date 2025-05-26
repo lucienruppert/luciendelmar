@@ -34,8 +34,8 @@ export class ServicesComponent {
   }
 
   public goToContactPage(): void {
-    this.router.navigate(['..', 'contact'], {
-      relativeTo: this.route,
+    this.router.navigate(['/contact']).then(() => {
+      window.scrollTo(0, 0);
     });
   }
 }

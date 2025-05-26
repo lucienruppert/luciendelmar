@@ -13,6 +13,8 @@ export class HoldingConversationComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   public goToContactPage(): void {
-    this.router.navigate(['/contact']);
+    this.router.navigate(['/services']).then(() => {
+      window.scrollTo(0, 0);
+    });
   }
 }
