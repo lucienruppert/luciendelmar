@@ -22,7 +22,3 @@
 main {
   @apply flex flex-col items-center;
 }
-
-hr {
-  @apply border-gray-400 mb-5;
-}
