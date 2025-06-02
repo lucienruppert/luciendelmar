@@ -1,5 +1,5 @@
 :host {
-  @apply flex flex-col items-center bg-zinc-900 text-gray-400 text-lg min-h-screen w-[700px];
+  @apply flex flex-col items-center bg-zinc-900 text-gray-400 text-lg min-h-screen;
 }
 
 span {
