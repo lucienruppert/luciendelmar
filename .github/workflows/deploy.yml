@@ -56,7 +56,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/luciendelmar/browser/
-          server-dir: /httpd/www/luciendelmar.com/html/tribebuddy/
+          server-dir: /httpd/www/luciendelmar.com/html/
           dangerous-clean-slate: false
           state-name: .ftp-deploy-sync-state.json
           dry-run: false
