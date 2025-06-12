@@ -1,0 +1,12 @@
+<div class="testimonials-container">
+  <h2 class="section-title">Klienseim mondták</h2>
+
+  <div class="testimonials-grid">
+    @for (testimonial of testimonials; track testimonial) {
+    <div class="testimonial-card">
+      <p class="testimonial-text">"{{ testimonial.text }}"</p>
+      <p class="testimonial-author">- {{ testimonial.author }}</p>
+    </div>
+    }
+  </div>
+</div>

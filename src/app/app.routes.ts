@@ -10,6 +10,7 @@ import { ShowVideoComponent } from './components/show-video/show-video.component
 import { RegresssionTherapyComponent } from './components/regresssion-therapy/regresssion-therapy.component';
 import { HoldingConversationComponent } from './components/holding-conversation/holding-conversation.component';
 import { HolisticPulsingComponent } from './components/holistic-pulsing/holistic-pulsing.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 export default [ShowVideoComponent];
 export const routes: Routes = [
@@ -32,6 +33,11 @@ export const routes: Routes = [
   {
     path: 'methods/regression-therapy',
     component: RegresssionTherapyComponent,
+    data: { prerender: true },
+  },
+  {
+    path: 'testimonials',
+    component: TestimonialsComponent,
     data: { prerender: true },
   },
   {

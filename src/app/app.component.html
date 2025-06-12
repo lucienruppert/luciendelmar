@@ -123,6 +123,13 @@
           Egyéni folyamat
         </button>
         <button
+          routerLink="testimonials"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'testimonials')"
+        >
+          Klienseim mondták
+        </button>
+        <button
           routerLink="videos"
           routerLinkActive="active"
           (click)="navigateTo($event, 'videos')"
