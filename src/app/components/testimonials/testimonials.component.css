@@ -7,11 +7,11 @@ span {
 }
 
 .text {
-  @apply ml-5 mb-8;
+  @apply ml-5;
 }
 
 .testimonial-block {
-  @apply mb-12;
+  @apply mb-20;
 }
 
 .testimonial-text {
