@@ -13,7 +13,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule, MatSidenav } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
@@ -32,7 +31,6 @@ import { FooterComponent } from './components/footer/footer.component';
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
-    FlexLayoutModule,
     FooterComponent,
   ],
 })
