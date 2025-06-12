@@ -1,12 +1,9 @@
-<div class="testimonials-container">
-  <h2 class="section-title">Klienseim mondták</h2>
-
-  <div class="testimonials-grid">
-    @for (testimonial of testimonials; track testimonial) {
-    <div class="testimonial-card">
-      <p class="testimonial-text">"{{ testimonial.text }}"</p>
-      <p class="testimonial-author">- {{ testimonial.author }}</p>
-    </div>
-    }
+<span class="text-4xl my-10 text-center text-gold">Klienseim mondták</span>
+<main class="text-justify mb-24">
+  @for (testimonial of testimonials; track testimonial) {
+  <div class="testimonial-block">
+    <span class="text testimonial-text"> "{{ testimonial.text }}" </span>
+    <span class="testimonial-author">{{ testimonial.author }}</span>
   </div>
-</div>
+  }
+</main>

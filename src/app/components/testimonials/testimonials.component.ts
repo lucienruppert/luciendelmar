@@ -11,16 +11,8 @@ import { CommonModule } from '@angular/common';
 export class TestimonialsComponent {
   testimonials = [
     {
-      text: 'A folyamat során mély belátásokat nyertem, és jelentős változásokat tapasztaltam az életemben.',
+      text: 'A regressziós folyamat során olyan mély belátásokat nyertem, amelyek segítettek megérteni és elengedni régóta húzódó érzelmi mintáimat. Lucien biztonságos teret teremtett a munkához, és szakértő módon vezetett végig az úton.',
       author: 'Anna K.',
-    },
-    {
-      text: 'Lucien szakértelme és empatikus megközelítése segített feldolgozni régóta húzódó problémáimat.',
-      author: 'Péter M.',
-    },
-    {
-      text: 'A terápiás sessions után sokkal tisztábban látom az utamat és céljaimat.',
-      author: 'Zsófia T.',
     },
   ];
 }
