@@ -6,16 +6,12 @@ span {
   @apply inline-block;
 }
 
-.text {
-  @apply ml-5;
+.testimonial-title {
+  @apply text-2xl text-gold mb-10;
 }
 
 .testimonial-block {
-  @apply mb-20;
-}
-
-.testimonial-author {
-  @apply block text-gold text-right mt-2 mr-5;
+  @apply pt-20;
 }
 
 @media (max-width: 768px) {
