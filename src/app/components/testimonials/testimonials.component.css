@@ -14,10 +14,6 @@ span {
   @apply mb-20;
 }
 
-.testimonial-text {
-  @apply italic;
-}
-
 .testimonial-author {
   @apply block text-gold text-right mt-2 mr-5;
 }
