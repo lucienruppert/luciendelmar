@@ -32,7 +32,9 @@ mat-toolbar-row {
 }
 
 .brand {
-  @apply text-2xl font-light pl-4;
+  @apply text-3xl pl-4;
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
 }
 
 .active {
