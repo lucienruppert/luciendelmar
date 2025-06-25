@@ -28,8 +28,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   ],
 })
 export class VideosComponent implements OnInit {
-  public videoData: Array<{ id: string; time: string; thumbnail: string }> =
-    videos;
+  public videoData: Array<{
+    id: string;
+    time: string;
+    thumbnail: string;
+    title: string;
+    slug: string;
+  }> = videos;
   private dialogRef: any;
 
   constructor(
@@ -41,12 +46,12 @@ export class VideosComponent implements OnInit {
   ngOnInit() {
     // Subscribe to both params and queryParams to handle navigation
     this.route.params.subscribe((params) => {
-      const videoId = params['videoId'];
-      if (videoId) {
-        // If we have a video ID in the URL, try to find and open it
-        const video = this.videoData.find((v) => v.id === videoId);
+      const slug = params['videoId'];
+      if (slug) {
+        // If we have a slug in the URL, try to find and open it
+        const video = this.videoData.find((v) => v.slug === slug);
         if (video) {
-          this.openVideoDialog(videoId);
+          this.openVideoDialog(video.id);
         } else {
           // If video not found, redirect to videos page
           this.router.navigate(['/videos']);
@@ -56,8 +61,12 @@ export class VideosComponent implements OnInit {
   }
 
   public openDialog(id: string): void {
-    // Navigate to the video URL, which will trigger the params subscription
-    this.router.navigate(['/videos', id]);
+    // Find the video by ID to get its slug
+    const video = this.videoData.find((v) => v.id === id);
+    if (video) {
+      // Navigate using the slug
+      this.router.navigate(['/videos', video.slug]);
+    }
   }
 
   private openVideoDialog(id: string): void {
