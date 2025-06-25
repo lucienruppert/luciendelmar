@@ -32,7 +32,6 @@ export class VideosComponent implements OnInit {
     id: string;
     time: string;
     thumbnail: string;
-    title: string;
     slug: string;
   }> = videos;
   private dialogRef: any;
