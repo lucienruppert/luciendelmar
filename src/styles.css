@@ -10,13 +10,38 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+/* Dialog styles */
 .dialog-backdrop {
-  @apply bg-zinc-900;
+  background: rgba(24 24 27) !important;
 }
 
 .video-dialog {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgb(24 24 27) !important; /* bg-zinc-900 */
+  box-shadow: none !important;
 }
 
+.video-dialog .cdk-dialog-container {
+  padding: 0;
+  overflow: hidden;
+  background: rgb(24 24 27) !important; /* bg-zinc-900 */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  animation: dialogFadeIn 0.2s ease-out;
+}
+
+@keyframes dialogFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Override any default dialog animations */
+.cdk-dialog-container {
+  transform: none !important;
+}

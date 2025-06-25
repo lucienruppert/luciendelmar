@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Dialog, DialogModule } from '@angular/cdk/dialog';
 import { ShowVideoComponent } from '../show-video/show-video.component';
 import videos from './videos';
@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-videos',
@@ -26,17 +27,59 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     DialogModule,
   ],
 })
-export class VideosComponent {
+export class VideosComponent implements OnInit {
   public videoData: Array<{ id: string; time: string; thumbnail: string }> =
     videos;
+  private dialogRef: any;
 
-  constructor(private dialog: Dialog) {}
+  constructor(
+    private dialog: Dialog,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  ngOnInit() {
+    // Subscribe to both params and queryParams to handle navigation
+    this.route.params.subscribe((params) => {
+      const videoId = params['videoId'];
+      if (videoId) {
+        // If we have a video ID in the URL, try to find and open it
+        const video = this.videoData.find((v) => v.id === videoId);
+        if (video) {
+          this.openVideoDialog(videoId);
+        } else {
+          // If video not found, redirect to videos page
+          this.router.navigate(['/videos']);
+        }
+      }
+    });
+  }
 
   public openDialog(id: string): void {
-    this.dialog.open(ShowVideoComponent, {
+    // Navigate to the video URL, which will trigger the params subscription
+    this.router.navigate(['/videos', id]);
+  }
+
+  private openVideoDialog(id: string): void {
+    // Close any existing dialog
+    if (this.dialogRef) {
+      this.dialogRef.close();
+    }
+
+    // Open the dialog with proper sizing
+    this.dialogRef = this.dialog.open(ShowVideoComponent, {
       data: { id },
       backdropClass: 'dialog-backdrop',
       panelClass: 'video-dialog',
+      disableClose: false,
+      hasBackdrop: true,
+      width: '80vw',
+      height: '80vh',
+    });
+
+    // When dialog closes, navigate back to videos page
+    this.dialogRef.closed.subscribe(() => {
+      this.router.navigate(['/videos']);
     });
   }
 }

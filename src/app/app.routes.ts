@@ -46,6 +46,11 @@ export const routes: Routes = [
     data: { prerender: true },
   },
   {
+    path: 'videos/:videoId',
+    component: VideosComponent,
+    data: { prerender: true },
+  },
+  {
     path: 'vision',
     component: VisionComponent,
     data: { prerender: true },
