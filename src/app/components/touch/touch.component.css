@@ -1,1 +1,19 @@
-/* Styles for touch component */
+:host {
+  @apply flex flex-col items-center bg-zinc-900 text-gray-400 min-h-screen text-lg;
+}
+
+span {
+  @apply inline-block;
+}
+
+.highlight {
+  @apply text-xl mb-5 mt-10 text-gold font-normal inline-block;
+}
+
+.text {
+  @apply ml-5 mb-8;
+}
+
+main {
+  @apply w-3/4;
+}
