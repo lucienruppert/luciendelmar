@@ -90,12 +90,12 @@
         </button>
         <button
           *ngIf="showMethodsSubmenu"
-          routerLink="methods/holistic-pulsing"
+          routerLink="methods/touch"
           routerLinkActive="active"
-          (click)="navigateTo($event, 'methods/holistic-pulsing')"
+          (click)="navigateTo($event, 'methods/touch')"
           class="submenu-item"
         >
-          Ringatás
+          Érintés Gyógyítás
         </button>
         <button
           *ngIf="showMethodsSubmenu"
@@ -105,6 +105,15 @@
           class="submenu-item"
         >
           Érzelmi Oldás
+        </button>
+        <button
+          *ngIf="showMethodsSubmenu"
+          routerLink="methods/holistic-pulsing"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/holistic-pulsing')"
+          class="submenu-item"
+        >
+          Ringatás
         </button>
         <button
           *ngIf="showMethodsSubmenu"

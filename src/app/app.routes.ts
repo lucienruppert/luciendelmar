@@ -11,6 +11,7 @@ import { RegresssionTherapyComponent } from './components/regresssion-therapy/re
 import { HoldingConversationComponent } from './components/holding-conversation/holding-conversation.component';
 import { HolisticPulsingComponent } from './components/holistic-pulsing/holistic-pulsing.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { TouchComponent } from './components/touch/touch.component';
 
 export default [ShowVideoComponent];
 export const routes: Routes = [
@@ -73,6 +74,11 @@ export const routes: Routes = [
   {
     path: 'methods/holistic-pulsing',
     component: HolisticPulsingComponent,
+    data: { prerender: true },
+  },
+  {
+    path: 'methods/touch',
+    component: TouchComponent,
     data: { prerender: true },
   },
 ];
