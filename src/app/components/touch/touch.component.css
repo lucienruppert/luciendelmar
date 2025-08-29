@@ -7,7 +7,7 @@ span {
 }
 
 .highlight {
-  @apply text-xl mb-5 mt-10 text-gold font-normal inline-block;
+  @apply text-xl mb-5 mt-14 text-gold font-normal inline-block;
 }
 
 .text {
