@@ -125,13 +125,6 @@
           Circling
         </button>
         <button
-          routerLink="services"
-          routerLinkActive="active"
-          (click)="navigateTo($event, 'services')"
-        >
-          Jelentkezés
-        </button>
-        <button
           routerLink="testimonials"
           routerLinkActive="active"
           (click)="navigateTo($event, 'testimonials')"
@@ -146,11 +139,18 @@
           Videók
         </button>
         <button
+          routerLink="services"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'services')"
+        >
+          Egyéni ülések
+        </button>
+        <button
           routerLink="contact"
           routerLinkActive="active"
           (click)="navigateTo($event, 'contact')"
         >
-          Kapcsolat
+          Jelentkezés
         </button>
       </mat-nav-list>
     </mat-sidenav>
