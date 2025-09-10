@@ -1,21 +1,29 @@
 :host {
-  @apply flex flex-col items-center bg-zinc-900 text-gray-400 min-h-screen text-lg;
+  @apply flex flex-col items-center bg-zinc-900 text-gray-400 min-h-screen;
 }
 
 span {
-  @apply inline-block;
+  @apply inline-block text-lg;
+}
+
+.title {
+  @apply text-4xl;
 }
 
 .testimonial-title {
-  @apply text-2xl text-gold mb-10;
+  @apply text-2xl text-gold;
+}
+
+.testimonial-service {
+  @apply text-gray-400 underline mb-8 mt-2 ml-2 text-base;
 }
 
 .testimonial-block {
-  @apply pt-20;
+  @apply flex flex-col;
 }
 
 .testimonial-author {
-  @apply pt-5;
+  @apply pt-5 text-right pb-16;
 }
 
 @media (max-width: 768px) {
