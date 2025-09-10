@@ -71,10 +71,39 @@
         </button>
         <button
           routerLinkActive="active"
+          (click)="toggleSubmenu('touchTherapy')"
+          class="flex items-center"
+        >
+          Érintésterápia
+          <mat-icon class="ml-1 text-sm">{{
+            showTouchTherapySubmenu ? "expand_less" : "expand_more"
+          }}</mat-icon>
+        </button>
+        <!-- Submenu for Touch Therapy -->
+        <button
+          *ngIf="showTouchTherapySubmenu"
+          routerLink="methods/touch"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/touch')"
+          class="submenu-item"
+        >
+          Érintés Gyógyítás
+        </button>
+        <button
+          *ngIf="showTouchTherapySubmenu"
+          routerLink="methods/holistic-pulsing"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/holistic-pulsing')"
+          class="submenu-item"
+        >
+          Ringatás
+        </button>
+        <button
+          routerLinkActive="active"
           (click)="toggleSubmenu('methods')"
           class="flex items-center"
         >
-          Eszköztáram
+          Egyéb eszközeim
           <mat-icon class="ml-1 text-sm">{{
             showMethodsSubmenu ? "expand_less" : "expand_more"
           }}</mat-icon>
@@ -90,30 +119,12 @@
         </button>
         <button
           *ngIf="showMethodsSubmenu"
-          routerLink="methods/touch"
-          routerLinkActive="active"
-          (click)="navigateTo($event, 'methods/touch')"
-          class="submenu-item"
-        >
-          Érintés Gyógyítás
-        </button>
-        <button
-          *ngIf="showMethodsSubmenu"
           routerLink="methods/regression-therapy"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/regression-therapy')"
           class="submenu-item"
         >
           Érzelmi Oldás
-        </button>
-        <button
-          *ngIf="showMethodsSubmenu"
-          routerLink="methods/holistic-pulsing"
-          routerLinkActive="active"
-          (click)="navigateTo($event, 'methods/holistic-pulsing')"
-          class="submenu-item"
-        >
-          Ringatás
         </button>
         <button
           *ngIf="showMethodsSubmenu"
