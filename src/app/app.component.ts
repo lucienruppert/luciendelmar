@@ -41,7 +41,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   showMethodsSubmenu: boolean = false;
   showAboutSubmenu: boolean = false;
-  showTouchTherapySubmenu: boolean = false;
+  showTouchSubmenu: boolean = false;
 
   // expose navLog publicly for template binding
   constructor(private cdr: ChangeDetectorRef, public navLog: NavLogService) {}
@@ -114,9 +114,9 @@ export class AppComponent implements AfterViewInit {
       this.showAboutSubmenu = !this.showAboutSubmenu;
       this.navLog.add('Toggled rolam submenu to: ' + this.showAboutSubmenu);
     } else if (submenu === 'touchTherapy') {
-      this.showTouchTherapySubmenu = !this.showTouchTherapySubmenu;
+      this.showTouchSubmenu = !this.showTouchSubmenu;
       this.navLog.add(
-        'Toggled touch therapy submenu to: ' + this.showTouchTherapySubmenu
+        'Toggled touch therapy submenu to: ' + this.showTouchSubmenu
       );
     }
     // Don't close sidenav when toggling submenu

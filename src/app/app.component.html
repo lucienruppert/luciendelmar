@@ -74,14 +74,14 @@
           (click)="toggleSubmenu('touchTherapy')"
           class="flex items-center"
         >
-          Érintésterápia
+          ÉRINTÉS
           <mat-icon class="ml-1 text-sm">{{
-            showTouchTherapySubmenu ? "expand_less" : "expand_more"
+            showTouchSubmenu ? "expand_less" : "expand_more"
           }}</mat-icon>
         </button>
         <!-- Submenu for Touch Therapy -->
         <button
-          *ngIf="showTouchTherapySubmenu"
+          *ngIf="showTouchSubmenu"
           routerLink="methods/touch"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/touch')"
@@ -90,7 +90,7 @@
           Érintés Gyógyítás
         </button>
         <button
-          *ngIf="showTouchTherapySubmenu"
+          *ngIf="showTouchSubmenu"
           routerLink="methods/holistic-pulsing"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/holistic-pulsing')"
