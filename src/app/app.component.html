@@ -99,17 +99,24 @@
           Ringatás
         </button>
         <button
+          routerLink="methods/regression-therapy"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/regression-therapy')"
+        >
+          OLDÁS
+        </button>
+        <button
           routerLinkActive="active"
           (click)="toggleSubmenu('methods')"
           class="flex items-center"
         >
-          Egyéb eszközeim
+          KOMMUNIKÁCIÓ
           <mat-icon class="ml-1 text-sm">{{
-            showMethodsSubmenu ? "expand_less" : "expand_more"
+            showCommunicationsSubmenu ? "expand_less" : "expand_more"
           }}</mat-icon>
         </button>
         <button
-          *ngIf="showMethodsSubmenu"
+          *ngIf="showCommunicationsSubmenu"
           routerLink="methods/holding-conversation"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/holding-conversation')"
@@ -118,16 +125,7 @@
           Megtartó beszélgetés
         </button>
         <button
-          *ngIf="showMethodsSubmenu"
-          routerLink="methods/regression-therapy"
-          routerLinkActive="active"
-          (click)="navigateTo($event, 'methods/regression-therapy')"
-          class="submenu-item"
-        >
-          OLDÁS
-        </button>
-        <button
-          *ngIf="showMethodsSubmenu"
+          *ngIf="showCommunicationsSubmenu"
           routerLink="methods/circling"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/circling')"

@@ -39,7 +39,7 @@ export class AppComponent implements AfterViewInit {
   private isMobile: boolean = false;
   private lastToggleTime: number = 0;
   @ViewChild('sidenav') sidenav!: MatSidenav;
-  showMethodsSubmenu: boolean = false;
+  showCommunicationsSubmenu: boolean = false;
   showAboutSubmenu: boolean = false;
   showTouchSubmenu: boolean = false;
 
@@ -108,8 +108,10 @@ export class AppComponent implements AfterViewInit {
   // Toggle submenu for methods, rolam, and touch therapy
   toggleSubmenu(submenu: string) {
     if (submenu === 'methods') {
-      this.showMethodsSubmenu = !this.showMethodsSubmenu;
-      this.navLog.add('Toggled methods submenu to: ' + this.showMethodsSubmenu);
+      this.showCommunicationsSubmenu = !this.showCommunicationsSubmenu;
+      this.navLog.add(
+        'Toggled methods submenu to: ' + this.showCommunicationsSubmenu
+      );
     } else if (submenu === 'rolam') {
       this.showAboutSubmenu = !this.showAboutSubmenu;
       this.navLog.add('Toggled rolam submenu to: ' + this.showAboutSubmenu);
