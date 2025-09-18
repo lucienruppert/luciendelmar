@@ -39,9 +39,8 @@ export class AppComponent implements AfterViewInit {
   private isMobile: boolean = false;
   private lastToggleTime: number = 0;
   @ViewChild('sidenav') sidenav!: MatSidenav;
-  showCommunicationsSubmenu: boolean = false;
   showAboutSubmenu: boolean = false;
-  showTouchSubmenu: boolean = false;
+  showEszkozokSubmenu: boolean = false;
 
   // expose navLog publicly for template binding
   constructor(private cdr: ChangeDetectorRef, public navLog: NavLogService) {}
@@ -105,20 +104,15 @@ export class AppComponent implements AfterViewInit {
     }
   }
 
-  // Toggle submenu for methods, rolam, and touch therapy
+  // Toggle submenu for rolam and eszkozok
   toggleSubmenu(submenu: string) {
-    if (submenu === 'methods') {
-      this.showCommunicationsSubmenu = !this.showCommunicationsSubmenu;
-      this.navLog.add(
-        'Toggled methods submenu to: ' + this.showCommunicationsSubmenu
-      );
-    } else if (submenu === 'rolam') {
+    if (submenu === 'rolam') {
       this.showAboutSubmenu = !this.showAboutSubmenu;
       this.navLog.add('Toggled rolam submenu to: ' + this.showAboutSubmenu);
-    } else if (submenu === 'touchTherapy') {
-      this.showTouchSubmenu = !this.showTouchSubmenu;
+    } else if (submenu === 'eszkozok') {
+      this.showEszkozokSubmenu = !this.showEszkozokSubmenu;
       this.navLog.add(
-        'Toggled touch therapy submenu to: ' + this.showTouchSubmenu
+        'Toggled eszkozok submenu to: ' + this.showEszkozokSubmenu
       );
     }
     // Don't close sidenav when toggling submenu

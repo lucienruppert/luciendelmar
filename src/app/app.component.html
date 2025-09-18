@@ -71,17 +71,17 @@
         </button>
         <button
           routerLinkActive="active"
-          (click)="toggleSubmenu('touchTherapy')"
+          (click)="toggleSubmenu('eszkozok')"
           class="flex items-center"
         >
-          ÉRINTÉS
+          Eszközeim
           <mat-icon class="ml-1 text-sm">{{
-            showTouchSubmenu ? "expand_less" : "expand_more"
+            showEszkozokSubmenu ? "expand_less" : "expand_more"
           }}</mat-icon>
         </button>
-        <!-- Submenu for Touch Therapy -->
+        <!-- Submenu for Eszközök -->
         <button
-          *ngIf="showTouchSubmenu"
+          *ngIf="showEszkozokSubmenu"
           routerLink="methods/touch"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/touch')"
@@ -90,7 +90,7 @@
           Érintés Gyógyítás
         </button>
         <button
-          *ngIf="showTouchSubmenu"
+          *ngIf="showEszkozokSubmenu"
           routerLink="methods/holistic-pulsing"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/holistic-pulsing')"
@@ -99,24 +99,16 @@
           Ringatás
         </button>
         <button
+          *ngIf="showEszkozokSubmenu"
           routerLink="methods/regression-therapy"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/regression-therapy')"
+          class="submenu-item"
         >
-          OLDÁS
+          Érzelmi Oldás
         </button>
         <button
-          routerLinkActive="active"
-          (click)="toggleSubmenu('methods')"
-          class="flex items-center"
-        >
-          KOMMUNIKÁCIÓ
-          <mat-icon class="ml-1 text-sm">{{
-            showCommunicationsSubmenu ? "expand_less" : "expand_more"
-          }}</mat-icon>
-        </button>
-        <button
-          *ngIf="showCommunicationsSubmenu"
+          *ngIf="showEszkozokSubmenu"
           routerLink="methods/holding-conversation"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/holding-conversation')"
@@ -125,7 +117,7 @@
           Megtartó beszélgetés
         </button>
         <button
-          *ngIf="showCommunicationsSubmenu"
+          *ngIf="showEszkozokSubmenu"
           routerLink="methods/circling"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/circling')"
