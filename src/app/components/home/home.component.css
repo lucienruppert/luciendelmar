@@ -20,7 +20,7 @@ a {
     @apply w-4/5;
   }
   .title {
-    @apply text-2xl;
+    @apply text-4xl;
   }
   img {
     @apply mb-5 float-none w-full ml-0;
