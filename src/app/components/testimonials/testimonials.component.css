@@ -26,8 +26,20 @@ span {
   @apply pt-5 text-right pb-16;
 }
 
+.testimonial-image {
+  @apply flex justify-center;
+}
+
+.testimonial-image img {
+  @apply max-w-md w-full rounded-lg shadow-lg my-4;
+}
+
 @media (max-width: 768px) {
   main {
     @apply w-4/5;
+  }
+
+  .testimonial-image img {
+    @apply max-w-xs;
   }
 }
