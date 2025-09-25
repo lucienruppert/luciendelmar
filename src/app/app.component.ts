@@ -131,7 +131,7 @@ export class AppComponent implements AfterViewInit {
       }
     }
 
-    // Simply close the sidenav if it exists and is open
+    // Simply close the sidenav if it exists and is open - yes
     if (this.sidenav && this.sidenav.opened) {
       this.navLog.add('sidenav.close() via navigateTo');
       this.sidenav.close();
