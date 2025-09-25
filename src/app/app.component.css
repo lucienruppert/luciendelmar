@@ -32,9 +32,16 @@ mat-toolbar-row {
 }
 
 .brand {
-  @apply text-3xl pl-4;
+  @apply pt-4 pl-4 cursor-pointer;
   font-family: "Dancing Script", cursive;
-  font-weight: 600;
+  font-weight: 100;
+  font-size: 32px;
+}
+
+.brand-subtitle {
+  @apply text-base pl-4 cursor-pointer text-gray-400;
+  font-weight: 300;
+  font-size: 15px;
 }
 
 .active {
