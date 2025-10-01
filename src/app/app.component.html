@@ -3,7 +3,9 @@
     <mat-toolbar-row>
       <div class="flex flex-col">
         <span routerLink="/" class="brand">Lucien del Mar</span>
-        <span routerLink="/"  class="brand-subtitle">Szerelemben a Valósággal</span>
+        <span routerLink="/" class="brand-subtitle"
+          >Szerelemben a Valósággal</span
+        >
       </div>
       <span class="menu-spacer"></span>
       <button
@@ -85,21 +87,21 @@
         <!-- Submenu for Eszközök -->
         <button
           *ngIf="showEszkozokSubmenu"
+          routerLink="methods/holding-conversation"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/holding-conversation')"
+          class="submenu-item"
+        >
+          Megtartó beszélgetés
+        </button>
+        <button
+          *ngIf="showEszkozokSubmenu"
           routerLink="methods/touch"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/touch')"
           class="submenu-item"
         >
-          Érintés Gyógyítás
-        </button>
-        <button
-          *ngIf="showEszkozokSubmenu"
-          routerLink="methods/holistic-pulsing"
-          routerLinkActive="active"
-          (click)="navigateTo($event, 'methods/holistic-pulsing')"
-          class="submenu-item"
-        >
-          Ringatás
+          Gyógyító Érintés
         </button>
         <button
           *ngIf="showEszkozokSubmenu"
@@ -112,12 +114,12 @@
         </button>
         <button
           *ngIf="showEszkozokSubmenu"
-          routerLink="methods/holding-conversation"
+          routerLink="methods/holistic-pulsing"
           routerLinkActive="active"
-          (click)="navigateTo($event, 'methods/holding-conversation')"
+          (click)="navigateTo($event, 'methods/holistic-pulsing')"
           class="submenu-item"
         >
-          Megtartó beszélgetés
+          Ringatás
         </button>
         <button
           *ngIf="showEszkozokSubmenu"
