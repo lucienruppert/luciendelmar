@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 export class HeadComponent {
   constructor(private router: Router) {}
 
-  public goToTestimonialsPage(): void {
-    this.router.navigate(['/testimonials']).then(() => {
+  public goToServicesPage(): void {
+    this.router.navigate(['/services']).then(() => {
       window.scrollTo(0, 0);
     });
   }
