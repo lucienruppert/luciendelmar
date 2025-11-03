@@ -114,6 +114,15 @@
         </button>
         <button
           *ngIf="showEszkozokSubmenu"
+          routerLink="methods/head"
+          routerLinkActive="active"
+          (click)="navigateTo($event, 'methods/head')"
+          class="submenu-item"
+        >
+          Fejszeretgető Érintés
+        </button>
+        <button
+          *ngIf="showEszkozokSubmenu"
           routerLink="methods/holistic-pulsing"
           routerLinkActive="active"
           (click)="navigateTo($event, 'methods/holistic-pulsing')"

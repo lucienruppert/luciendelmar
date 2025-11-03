@@ -12,6 +12,7 @@ import { HoldingConversationComponent } from './components/holding-conversation/
 import { HolisticPulsingComponent } from './components/holistic-pulsing/holistic-pulsing.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { TouchComponent } from './components/touch/touch.component';
+import { HeadComponent } from './components/head/head.component';
 
 export default [ShowVideoComponent];
 export const routes: Routes = [
@@ -79,6 +80,11 @@ export const routes: Routes = [
   {
     path: 'methods/touch',
     component: TouchComponent,
+    data: { prerender: true },
+  },
+  {
+    path: 'methods/head',
+    component: HeadComponent,
     data: { prerender: true },
   },
 ];
