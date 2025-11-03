@@ -9,9 +9,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'app-services',
-  templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css'],
+  selector: 'app-sessions',
+  templateUrl: './sessions.component.html',
+  styleUrls: ['./sessions.component.css'],
   standalone: true,
   imports: [
     CommonModule,
@@ -24,7 +24,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule,
   ],
 })
-export class ServicesComponent {
+export class SessionsComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   public navigateWithScroll(path: string): void {

@@ -4,7 +4,7 @@ import { CirclingComponent } from './components/circling/circling.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VisionComponent } from './components/vision/vision.component';
 import { HomeComponent } from './components/home/home.component';
-import { ServicesComponent } from './components/services/services.component';
+import { SessionsComponent } from './components/sessions/sessions.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ShowVideoComponent } from './components/show-video/show-video.component';
 import { RegresssionTherapyComponent } from './components/regresssion-therapy/regresssion-therapy.component';
@@ -58,8 +58,8 @@ export const routes: Routes = [
     data: { prerender: true },
   },
   {
-    path: 'services',
-    component: ServicesComponent,
+    path: 'sessions',
+    component: SessionsComponent,
     data: { prerender: true },
   },
   {
